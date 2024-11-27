@@ -16,6 +16,7 @@ namespace QuanLyCuaHang.All_User_Control
         public UC_LichSuMua()
         {
             InitializeComponent();
+            CustomizeDataGridView();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace QuanLyCuaHang.All_User_Control
         {
             DataTable dataTable = new DataTable();
             DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Select_HoaDon";
+            dbExec.Query = $"EXEC SP_Xuat_LichSuHoaDon";
             dbExec.executeQueryDataAdapter().Fill(dataTable);
             return dataTable;
         }
@@ -70,7 +71,7 @@ namespace QuanLyCuaHang.All_User_Control
             uC_XoaHoaDon2.Visible = false;
             btn_timhoadon.PerformClick();
 
-            guna2DataGridView2.DataSource = GetDataFromTable();
+            dataGridView1.DataSource = GetDataFromTable();
 
             //uC_TimHoaDon1.Visible=false;
             //uC_XoaHoaDon1.Visible = false;

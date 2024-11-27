@@ -17,15 +17,7 @@ namespace QuanLyCuaHang.All_User_Control
         public UC_HoaDon()
         {
             InitializeComponent();
-            try
-            {
-                dataGridView1.DataSource = GetDataFromTable();
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error innitializing UC_HoaDon: " + ex.Message);
-            }
+            
         }
 
         //Lấy dữ liệu từng bảng
@@ -33,14 +25,14 @@ namespace QuanLyCuaHang.All_User_Control
         {
             DataTable dataTable = new DataTable();
             DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Select_HoaDon";
+            dbExec.Query = $"EXEC SP_Xuat_CuaHang";
             dbExec.executeQueryDataAdapter().Fill(dataTable);
             return dataTable;
         }
 
         private void UC_HoaDon_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = GetDataFromTable();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -49,11 +41,6 @@ namespace QuanLyCuaHang.All_User_Control
         }
 
         private void text_ngaymuahang_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

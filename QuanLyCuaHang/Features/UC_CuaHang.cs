@@ -18,7 +18,8 @@ namespace QuanLyCuaHang.All_User_Control
         public UC_CuaHang()
         {
             InitializeComponent();
-            dataGridView1.AutoResizeColumns();
+            CustomizeDataGridView();
+            //dataGridView1.AutoResizeColumns();
         }
 
         //Lấy dữ liệu từng bảng
@@ -26,15 +27,14 @@ namespace QuanLyCuaHang.All_User_Control
         {
             DataTable dataTable = new DataTable();
             DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Select_HoaDon";
+            dbExec.Query = $"EXEC SP_Xuat_CuaHang";
             dbExec.executeQueryDataAdapter().Fill(dataTable);
             return dataTable;
         }
 
         private void UC_CuaHang_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null; // Bug về load bảng ko theo trình tự
-
+            dataGridView1.DataSource = GetDataFromTable();
         }
 
         private void btn_xoakhoikho_Click(object sender, EventArgs e)

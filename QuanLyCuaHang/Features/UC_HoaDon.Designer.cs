@@ -1,4 +1,6 @@
-﻿namespace QuanLyCuaHang.All_User_Control
+﻿using System.Drawing;
+
+namespace QuanLyCuaHang.All_User_Control
 {
     partial class UC_HoaDon
     {
@@ -317,31 +319,46 @@
             // 
             // dataGridView1
             // 
+            // General settings
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke; // Nền sáng đẹp
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None; // Bỏ viền để nhìn thanh thoát hơn
+
+            // Column headers styling
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(33, 150, 243); // Xanh nước biển tươi sáng cho tiêu đề
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold); // Phông chữ mượt mà
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White; // Chữ trắng cho tiêu đề
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(33, 150, 243); // Giữ màu khi chọn
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.ColumnHeadersHeight = 40; // Tiêu đề cột cao hơn để tạo không gian thoáng
+
+            // Cell styling
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White; // Nền trắng cho ô dữ liệu
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F); // Phông chữ hiện đại
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black; // Chữ đen
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue; // Nền màu khi chọn
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black; // Chữ đen khi chọn
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+
+            // Row settings
+            this.dataGridView1.RowHeadersVisible = false; // Ẩn phần RowHeaders
+            this.dataGridView1.GridColor = System.Drawing.Color.LightGray; // Màu lưới sáng tạo
+            this.dataGridView1.RowTemplate.Height = 35; // Chiều cao dòng đẹp và mượt mà
+            this.dataGridView1.ReadOnly = true; // Không cho phép chỉnh sửa dữ liệu
+
+            // Kích hoạt tiêu đề đẹp hơn
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
+
+            // Size and position
             this.dataGridView1.Location = new System.Drawing.Point(109, 82);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -350,7 +367,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(963, 585);
             this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txt_SoDienThoai_HD
             // 
@@ -443,7 +459,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+        }
 
+        private void CustomizeDataGridView()
+        {
+            // CellMouseEnter event
+            this.dataGridView1.CellMouseEnter += (s, e) =>
+            {
+                if (e.RowIndex >= 0)
+                {
+                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(173, 216, 230); // Light color on hover
+                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold); // Bold on hover
+                }
+            };
+
+            // CellMouseLeave event
+            this.dataGridView1.CellMouseLeave += (s, e) =>
+            {
+                if (e.RowIndex >= 0)
+                {
+                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.White; // Return to white color
+                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F); // Normal font
+                }
+            };
+
+            // Paint event (to add shadow effect)
+            this.dataGridView1.Paint += (s, e) =>
+            {
+                var graphics = e.Graphics;
+                var shadowColor = Color.FromArgb(100, 0, 0, 0); // Light shadow color
+                var shadowSize = 8;
+                graphics.FillRectangle(new SolidBrush(shadowColor), new Rectangle(this.dataGridView1.Width - shadowSize, this.dataGridView1.Height - shadowSize, shadowSize, shadowSize));
+            };
+
+            this.dataGridView1.Scroll += (s, e) =>
+            {
+                this.dataGridView1.Refresh();
+            };
         }
 
         #endregion
