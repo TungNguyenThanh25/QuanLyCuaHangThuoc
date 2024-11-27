@@ -1,1 +1,20 @@
 .vs/
+
+# Ignore debug and binary files
+bin/
+obj/
+*.exe
+*.pdb
+*.dll
+*.cache
+*.log
+
+# Ignore package folders
+packages/
+
+# Ignore image files
+photos/
+*.png
+*.jpg
+*.jpeg
+*.webp
