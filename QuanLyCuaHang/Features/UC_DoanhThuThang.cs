@@ -22,6 +22,19 @@ namespace QuanLyCuaHang
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

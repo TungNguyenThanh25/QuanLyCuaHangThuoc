@@ -10,7 +10,7 @@ namespace QuanLyCuaHang.Database
 {
     internal class DatabaseConnection
     {
-        public static string ipAddress = "26.219.81.74"; // Server name
+        public static string ipAddress = "192.168.0.102"; // Server name
 
         public static string databaseName = "QL_CUAHANG_THUOC"; // Database
 

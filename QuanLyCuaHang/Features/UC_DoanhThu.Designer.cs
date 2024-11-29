@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,7 +46,9 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_DoanhThuNam1 = new QuanLyCuaHang.UC_DoanhThuNam();
             this.uC_DoanhThuThang1 = new QuanLyCuaHang.UC_DoanhThuThang();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -147,6 +152,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.chart1);
             this.guna2Panel1.Controls.Add(this.uC_DoanhThuNam1);
             this.guna2Panel1.Controls.Add(this.uC_DoanhThuThang1);
             this.guna2Panel1.Location = new System.Drawing.Point(49, 194);
@@ -207,19 +213,35 @@
             // uC_DoanhThuNam1
             // 
             this.uC_DoanhThuNam1.BackColor = System.Drawing.Color.Silver;
-            this.uC_DoanhThuNam1.Location = new System.Drawing.Point(0, 0);
+            this.uC_DoanhThuNam1.Location = new System.Drawing.Point(1118, 6);
             this.uC_DoanhThuNam1.Name = "uC_DoanhThuNam1";
-            this.uC_DoanhThuNam1.Size = new System.Drawing.Size(1720, 559);
+            this.uC_DoanhThuNam1.Size = new System.Drawing.Size(599, 553);
             this.uC_DoanhThuNam1.TabIndex = 1;
             this.uC_DoanhThuNam1.Load += new System.EventHandler(this.uC_DoanhThuNam1_Load);
             // 
             // uC_DoanhThuThang1
             // 
             this.uC_DoanhThuThang1.BackColor = System.Drawing.Color.Silver;
-            this.uC_DoanhThuThang1.Location = new System.Drawing.Point(0, -1);
+            this.uC_DoanhThuThang1.Location = new System.Drawing.Point(1118, 0);
             this.uC_DoanhThuThang1.Name = "uC_DoanhThuThang1";
-            this.uC_DoanhThuThang1.Size = new System.Drawing.Size(1720, 560);
+            this.uC_DoanhThuThang1.Size = new System.Drawing.Size(599, 874);
             this.uC_DoanhThuThang1.TabIndex = 0;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 6);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1120, 553);
+            this.chart1.TabIndex = 2;
+            this.chart1.Text = "chart1";
             // 
             // UC_DoanhThu
             // 
@@ -238,6 +260,7 @@
             this.Size = new System.Drawing.Size(1798, 777);
             this.Load += new System.EventHandler(this.UC_DoanhThu_Load);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +282,6 @@
         private UC_DoanhThuThang uC_DoanhThuThang1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private UC_DoanhThuNam uC_DoanhThuNam1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
