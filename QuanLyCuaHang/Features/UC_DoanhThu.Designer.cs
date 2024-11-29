@@ -1,4 +1,4 @@
-﻿namespace QuanLyCuaHang.All_User_Control
+﻿namespace QuanLyCuaHang
 {
     partial class UC_DoanhThu
     {
@@ -41,8 +41,8 @@
             this.btn_doanhthuthang = new Guna.UI2.WinForms.Guna2Button();
             this.panel_movingdoanhthu = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_DoanhThuNam1 = new QuanLyCuaHang.Features.UC_DoanhThuNam();
-            this.uC_DoanhThuThang1 = new QuanLyCuaHang.Features.UC_DoanhThuThang();
+            this.uC_DoanhThuNam1 = new QuanLyCuaHang.UC_DoanhThuNam();
+            this.uC_DoanhThuThang1 = new QuanLyCuaHang.UC_DoanhThuThang();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,8 +256,8 @@
         private Guna.UI2.WinForms.Guna2Panel panel_movingdoanhthu;
         private Guna.UI2.WinForms.Guna2Button btn_doanhthuthang;
         private Guna.UI2.WinForms.Guna2Button btn_doanhthunam;
-        private Features.UC_DoanhThuThang uC_DoanhThuThang1;
+        private UC_DoanhThuThang uC_DoanhThuThang1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Features.UC_DoanhThuNam uC_DoanhThuNam1;
+        private UC_DoanhThuNam uC_DoanhThuNam1;
     }
 }

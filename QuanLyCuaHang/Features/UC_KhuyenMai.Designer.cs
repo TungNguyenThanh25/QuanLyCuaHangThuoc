@@ -1,4 +1,4 @@
-﻿namespace QuanLyCuaHang.All_User_Control
+﻿namespace QuanLyCuaHang
 {
     partial class UC_KhuyenMai
     {
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_themkhuyenmaisanpham = new Guna.UI2.WinForms.Guna2Button();
@@ -41,11 +44,15 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_XoaKhuyenMaiHoaDon1 = new QuanLyCuaHang.Features.UC_XoaKhuyenMaiHoaDon();
-            this.uC_ThemKhuyenMaiHoaDon1 = new QuanLyCuaHang.Features.UC_ThemKhuyenMaiHoaDon();
-            this.uC_XoaMaKhuyenMaiSanPham1 = new QuanLyCuaHang.Features.UC_XoaMaKhuyenMaiSanPham();
-            this.uC_ThemMaKhuyenMaiSanPham1 = new QuanLyCuaHang.Features.UC_ThemMaKhuyenMaiSanPham();
+            this.uC_XoaKhuyenMaiHoaDon1 = new QuanLyCuaHang.UC_XoaKhuyenMaiHoaDon();
+            this.uC_ThemKhuyenMaiHoaDon1 = new QuanLyCuaHang.UC_ThemKhuyenMaiHoaDon();
+            this.uC_XoaMaKhuyenMaiSanPham1 = new QuanLyCuaHang.UC_XoaMaKhuyenMaiSanPham();
+            this.uC_ThemMaKhuyenMaiSanPham1 = new QuanLyCuaHang.UC_ThemMaKhuyenMaiSanPham();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(795, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 45);
+            this.label1.Size = new System.Drawing.Size(168, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Khuyến mãi\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -142,6 +149,8 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.uC_XoaKhuyenMaiHoaDon1);
             this.guna2Panel2.Controls.Add(this.uC_ThemKhuyenMaiHoaDon1);
             this.guna2Panel2.Controls.Add(this.uC_XoaMaKhuyenMaiSanPham1);
@@ -150,6 +159,7 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1723, 647);
             this.guna2Panel2.TabIndex = 8;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2Elipse2
             // 
@@ -169,31 +179,100 @@
             // 
             // uC_XoaKhuyenMaiHoaDon1
             // 
-            this.uC_XoaKhuyenMaiHoaDon1.Location = new System.Drawing.Point(-1, 0);
+            this.uC_XoaKhuyenMaiHoaDon1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_XoaKhuyenMaiHoaDon1.Location = new System.Drawing.Point(0, -1);
+            this.uC_XoaKhuyenMaiHoaDon1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_XoaKhuyenMaiHoaDon1.Name = "uC_XoaKhuyenMaiHoaDon1";
-            this.uC_XoaKhuyenMaiHoaDon1.Size = new System.Drawing.Size(1717, 644);
+            this.uC_XoaKhuyenMaiHoaDon1.Size = new System.Drawing.Size(758, 631);
             this.uC_XoaKhuyenMaiHoaDon1.TabIndex = 3;
             // 
             // uC_ThemKhuyenMaiHoaDon1
             // 
-            this.uC_ThemKhuyenMaiHoaDon1.Location = new System.Drawing.Point(3, 3);
+            this.uC_ThemKhuyenMaiHoaDon1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_ThemKhuyenMaiHoaDon1.Location = new System.Drawing.Point(2, 2);
+            this.uC_ThemKhuyenMaiHoaDon1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_ThemKhuyenMaiHoaDon1.Name = "uC_ThemKhuyenMaiHoaDon1";
-            this.uC_ThemKhuyenMaiHoaDon1.Size = new System.Drawing.Size(1717, 644);
+            this.uC_ThemKhuyenMaiHoaDon1.Size = new System.Drawing.Size(758, 631);
             this.uC_ThemKhuyenMaiHoaDon1.TabIndex = 2;
+            this.uC_ThemKhuyenMaiHoaDon1.Load += new System.EventHandler(this.uC_ThemKhuyenMaiHoaDon1_Load);
             // 
             // uC_XoaMaKhuyenMaiSanPham1
             // 
-            this.uC_XoaMaKhuyenMaiSanPham1.Location = new System.Drawing.Point(3, 3);
+            this.uC_XoaMaKhuyenMaiSanPham1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_XoaMaKhuyenMaiSanPham1.Location = new System.Drawing.Point(0, 0);
+            this.uC_XoaMaKhuyenMaiSanPham1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_XoaMaKhuyenMaiSanPham1.Name = "uC_XoaMaKhuyenMaiSanPham1";
-            this.uC_XoaMaKhuyenMaiSanPham1.Size = new System.Drawing.Size(1720, 644);
+            this.uC_XoaMaKhuyenMaiSanPham1.Size = new System.Drawing.Size(758, 631);
             this.uC_XoaMaKhuyenMaiSanPham1.TabIndex = 1;
+            this.uC_XoaMaKhuyenMaiSanPham1.Load += new System.EventHandler(this.uC_XoaMaKhuyenMaiSanPham1_Load);
             // 
             // uC_ThemMaKhuyenMaiSanPham1
             // 
+            this.uC_ThemMaKhuyenMaiSanPham1.BackColor = System.Drawing.Color.Transparent;
             this.uC_ThemMaKhuyenMaiSanPham1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ThemMaKhuyenMaiSanPham1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_ThemMaKhuyenMaiSanPham1.Name = "uC_ThemMaKhuyenMaiSanPham1";
-            this.uC_ThemMaKhuyenMaiSanPham1.Size = new System.Drawing.Size(1723, 647);
+            this.uC_ThemMaKhuyenMaiSanPham1.Size = new System.Drawing.Size(758, 631);
             this.uC_ThemMaKhuyenMaiSanPham1.TabIndex = 0;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.guna2Panel1.Controls.Add(this.guna2DataGridView1);
+            this.guna2Panel1.Location = new System.Drawing.Point(822, 40);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(860, 550);
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // guna2DataGridView1
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(4, 3);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(853, 544);
+            this.guna2DataGridView1.TabIndex = 0;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // UC_KhuyenMai
             // 
@@ -209,6 +288,8 @@
             this.Size = new System.Drawing.Size(1787, 776);
             this.Load += new System.EventHandler(this.UC_KhuyenMai_Load);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,12 +306,14 @@
         private Guna.UI2.WinForms.Guna2Button btn_themkhuyenmaihoadon;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Features.UC_ThemMaKhuyenMaiSanPham uC_ThemMaKhuyenMaiSanPham1;
+        private UC_ThemMaKhuyenMaiSanPham uC_ThemMaKhuyenMaiSanPham1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Features.UC_XoaMaKhuyenMaiSanPham uC_XoaMaKhuyenMaiSanPham1;
+        private UC_XoaMaKhuyenMaiSanPham uC_XoaMaKhuyenMaiSanPham1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private Features.UC_ThemKhuyenMaiHoaDon uC_ThemKhuyenMaiHoaDon1;
+        private UC_ThemKhuyenMaiHoaDon uC_ThemKhuyenMaiHoaDon1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private Features.UC_XoaKhuyenMaiHoaDon uC_XoaKhuyenMaiHoaDon1;
+        private UC_XoaKhuyenMaiHoaDon uC_XoaKhuyenMaiHoaDon1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

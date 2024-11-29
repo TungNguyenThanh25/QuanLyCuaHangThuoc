@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyCuaHang.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     public partial class UC_KhoHang : UserControl
     {
         public UC_KhoHang()
         {
             InitializeComponent();
+            guna2DataGridView1.DataSource = GetDataFromTable();
         }
 
         private void UC_KhoHang_Load(object sender, EventArgs e)
@@ -23,7 +25,19 @@ namespace QuanLyCuaHang.All_User_Control
             uC_XoaSanPham1.Visible=false;
             uC_SuaSanPham1.Visible=false;
             btn_themsanphamkhohang.PerformClick();
+        }
 
+        private DataTable GetDataFromTable()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Xuat_Kho";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
+            return dataTable;
         }
 
         private void label8_Click(object sender, EventArgs e)

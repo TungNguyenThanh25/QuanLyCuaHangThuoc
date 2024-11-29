@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.Features
+namespace QuanLyCuaHang
 {
     public partial class UC_DoanhThuThang : UserControl
     {
@@ -21,5 +21,7 @@ namespace QuanLyCuaHang.Features
         {
 
         }
+
+
     }
 }

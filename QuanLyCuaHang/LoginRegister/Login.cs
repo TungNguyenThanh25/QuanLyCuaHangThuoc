@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using QuanLyCuaHang.All_User_Control;
+using QuanLyCuaHang;
 using QuanLyCuaHang.Database;
 using QuanLyCuaHang.LoginRegister;
 

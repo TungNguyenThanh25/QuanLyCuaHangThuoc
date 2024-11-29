@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     partial class UC_LichSuMua
     {
@@ -35,20 +35,21 @@ namespace QuanLyCuaHang.All_User_Control
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.D = new Guna.UI2.WinForms.Guna2Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_timhoadon = new Guna.UI2.WinForms.Guna2Button();
             this.panel_movinglichsuhoadon = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_xoahoadon = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_XoaHoaDon2 = new QuanLyCuaHang.Features.UC_XoaHoaDon();
-            this.uC_TimHoaDon2 = new QuanLyCuaHang.Features.UC_TimHoaDon();
+            this.uC_XoaHoaDon2 = new QuanLyCuaHang.UC_XoaHoaDon();
+            this.uC_TimHoaDon2 = new QuanLyCuaHang.UC_TimHoaDon();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.D.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,100 +67,62 @@ namespace QuanLyCuaHang.All_User_Control
             // 
             this.D.BackColor = System.Drawing.Color.White;
             this.D.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.D.Controls.Add(this.dataGridView1);
+            this.D.Controls.Add(this.guna2DataGridView1);
             this.D.Location = new System.Drawing.Point(34, 110);
             this.D.Margin = new System.Windows.Forms.Padding(4);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(1177, 639);
             this.D.TabIndex = 4;
             // 
-            // dataGridView1
+            // guna2DataGridView1
             // 
-
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            this.dataGridView1.ScrollBars = ScrollBars.Both;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1173, 631);
-            this.dataGridView1.TabIndex = 6;
-
-            // General settings
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke; // Nền sáng đẹp
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None; // Bỏ viền để nhìn thanh thoát hơn
-
-            // Column headers styling
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(33, 150, 243); // Xanh nước biển tươi sáng cho tiêu đề
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold); // Phông chữ mượt mà
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White; // Chữ trắng cho tiêu đề
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(33, 150, 243); // Giữ màu khi chọn
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 40; // Tiêu đề cột cao hơn để tạo không gian thoáng
-
-            // Cell styling
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White; // Nền trắng cho ô dữ liệu
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F); // Phông chữ hiện đại
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black; // Chữ đen
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue; // Nền màu khi chọn
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black; // Chữ đen khi chọn
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-
-            // Row settings
-            this.dataGridView1.RowHeadersVisible = false; // Ẩn phần RowHeaders
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray; // Màu lưới sáng tạo
-            this.dataGridView1.RowTemplate.Height = 35; // Chiều cao dòng đẹp và mượt mà
-            this.dataGridView1.ReadOnly = true; // Không cho phép chỉnh sửa dữ liệu
-
-            // Kích hoạt tiêu đề đẹp hơn
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-
-            // Size and position
-            this.dataGridView1.Location = new System.Drawing.Point(0, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Size = new System.Drawing.Size(1173, 631);
-            this.dataGridView1.TabIndex = 6;
-
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1171, 633);
+            this.guna2DataGridView1.TabIndex = 0;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // guna2Elipse1
             // 
@@ -257,48 +220,11 @@ namespace QuanLyCuaHang.All_User_Control
             this.Size = new System.Drawing.Size(2248, 969);
             this.Load += new System.EventHandler(this.UC_LichSuMua_Load);
             this.D.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void CustomizeDataGridView()
-        {
-            // CellMouseEnter event
-            this.dataGridView1.CellMouseEnter += (s, e) =>
-            {
-                if (e.RowIndex >= 0)
-                {
-                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(173, 216, 230); // Light color on hover
-                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold); // Bold on hover
-                }
-            };
-
-            // CellMouseLeave event
-            this.dataGridView1.CellMouseLeave += (s, e) =>
-            {
-                if (e.RowIndex >= 0)
-                {
-                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.White; // Return to white color
-                    this.dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F); // Normal font
-                }
-            };
-
-            // Paint event (to add shadow effect)
-            this.dataGridView1.Paint += (s, e) =>
-            {
-                var graphics = e.Graphics;
-                var shadowColor = Color.FromArgb(100, 0, 0, 0); // Light shadow color
-                var shadowSize = 8;
-                graphics.FillRectangle(new SolidBrush(shadowColor), new Rectangle(this.dataGridView1.Width - shadowSize, this.dataGridView1.Height - shadowSize, shadowSize, shadowSize));
-            };
-
-            this.dataGridView1.Scroll += (s, e) =>
-            {
-                this.dataGridView1.Refresh();
-            };
         }
 
         #endregion
@@ -311,11 +237,11 @@ namespace QuanLyCuaHang.All_User_Control
         private Guna.UI2.WinForms.Guna2Button btn_timhoadon;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Features.UC_TimHoaDon uC_TimHoaDon1;
+        private UC_TimHoaDon uC_TimHoaDon1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Features.UC_XoaHoaDon uC_XoaHoaDon1;
-        private Features.UC_TimHoaDon uC_TimHoaDon2;
-        private Features.UC_XoaHoaDon uC_XoaHoaDon2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private UC_XoaHoaDon uC_XoaHoaDon1;
+        private UC_TimHoaDon uC_TimHoaDon2;
+        private UC_XoaHoaDon uC_XoaHoaDon2;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

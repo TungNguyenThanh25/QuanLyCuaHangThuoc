@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.Features
+namespace QuanLyCuaHang
 {
     public partial class UC_ThemKhuyenMaiHoaDon : UserControl
     {
@@ -61,6 +61,11 @@ namespace QuanLyCuaHang.Features
             txt_ngayketthuckhuyenmaihdthem.Clear();
             txt_phantramgiamhdthem.Clear();
             txt_soluongmakhuyenmaihdthem.Clear();
+        }
+
+        private void UC_ThemKhuyenMaiHoaDon_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

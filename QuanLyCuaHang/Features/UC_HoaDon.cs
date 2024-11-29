@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     public partial class UC_HoaDon : UserControl
     {
@@ -24,15 +24,19 @@ namespace QuanLyCuaHang.All_User_Control
         private DataTable GetDataFromTable()
         {
             DataTable dataTable = new DataTable();
-            DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Xuat_CuaHang";
-            dbExec.executeQueryDataAdapter().Fill(dataTable);
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                //dbExec.Query = $"EXEC SP_Xuat_CuaHang";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
             return dataTable;
         }
 
         private void UC_HoaDon_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetDataFromTable();
+            guna2DataGridView1.DataSource = GetDataFromTable();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

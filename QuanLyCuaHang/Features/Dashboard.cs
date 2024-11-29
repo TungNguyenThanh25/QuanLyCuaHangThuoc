@@ -1,4 +1,4 @@
-﻿using QuanLyCuaHang.All_User_Control;
+﻿using QuanLyCuaHang;
 using QuanLyCuaHang.Database;
 using QuanLyCuaHang.LoginRegister;
 using System;

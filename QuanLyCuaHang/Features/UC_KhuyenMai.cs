@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     public partial class UC_KhuyenMai : UserControl
     {
         public UC_KhuyenMai()
         {
             InitializeComponent();
+            //guna2DataGridView1.DataSource = GetDataFromKhuyenMaiThuoc();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -24,12 +25,32 @@ namespace QuanLyCuaHang.All_User_Control
         }
 
         //Lấy dữ liệu từng bảng
-        private DataTable GetDataFromTable()
+        private DataTable GetDataFromKhuyenMaiThuoc()
         {
             DataTable dataTable = new DataTable();
-            DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Select_HoaDon";
-            dbExec.executeQueryDataAdapter().Fill(dataTable);
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Xuat_KMT";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
+            
+            return dataTable;
+        }
+
+        //Lấy dữ liệu từng bảng
+        private DataTable GetDataFromKhuyenMaiHoaDon()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Xuat_KMHD";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
+
             return dataTable;
         }
 
@@ -40,7 +61,6 @@ namespace QuanLyCuaHang.All_User_Control
             uC_ThemKhuyenMaiHoaDon1.Visible = false;
             uC_XoaKhuyenMaiHoaDon1.Visible=false;
             btn_themkhuyenmaisanpham.PerformClick();
-
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,6 +80,8 @@ namespace QuanLyCuaHang.All_User_Control
             uC_ThemKhuyenMaiHoaDon1.Visible = false;
             uC_XoaKhuyenMaiHoaDon1.Visible = false;
 
+            guna2DataGridView1.DataSource = GetDataFromKhuyenMaiThuoc();
+
             panel_movingkhuyenmai.Left = btn_themkhuyenmaisanpham.Left;
             uC_ThemMaKhuyenMaiSanPham1.Visible = true;
             uC_ThemMaKhuyenMaiSanPham1.BringToFront();
@@ -71,6 +93,8 @@ namespace QuanLyCuaHang.All_User_Control
             //uC_XoaMaKhuyenMaiSanPham1.Visible = false;
             uC_ThemKhuyenMaiHoaDon1.Visible = false;
             uC_XoaKhuyenMaiHoaDon1.Visible = false;
+
+            guna2DataGridView1.DataSource = GetDataFromKhuyenMaiThuoc();
 
             panel_movingkhuyenmai.Left = btn_xoakhuyenmaisanpham.Left;
             uC_XoaMaKhuyenMaiSanPham1.Visible=true;
@@ -84,6 +108,8 @@ namespace QuanLyCuaHang.All_User_Control
             //uC_ThemKhuyenMaiHoaDon1.Visible = false;
             uC_XoaKhuyenMaiHoaDon1.Visible = false;
 
+            guna2DataGridView1.DataSource = GetDataFromKhuyenMaiHoaDon();
+
             panel_movingkhuyenmai.Left = btn_themkhuyenmaihoadon.Left;
             uC_ThemKhuyenMaiHoaDon1.Visible = true;
             uC_ThemKhuyenMaiHoaDon1.BringToFront();
@@ -96,12 +122,29 @@ namespace QuanLyCuaHang.All_User_Control
             uC_ThemKhuyenMaiHoaDon1.Visible = false;
             //uC_XoaKhuyenMaiHoaDon1.Visible = false;
 
+            guna2DataGridView1.DataSource = GetDataFromKhuyenMaiHoaDon();
+
             panel_movingkhuyenmai.Left = btn_xoakhuyenmaihoadon.Left;
             uC_XoaKhuyenMaiHoaDon1.Visible=true;
             uC_XoaKhuyenMaiHoaDon1.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void uC_ThemKhuyenMaiHoaDon1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uC_XoaMaKhuyenMaiSanPham1_Load(object sender, EventArgs e)
         {
 
         }

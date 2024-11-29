@@ -9,14 +9,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     public partial class UC_LichSuMua : UserControl
     {
         public UC_LichSuMua()
         {
             InitializeComponent();
-            CustomizeDataGridView();
+            InitializeUC_TimHoaDon(); // Gọi hàm khởi tạo
+            guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        private void InitializeUC_TimHoaDon()
+        {
+            var ucTimHoaDon = new UC_TimHoaDon();
+            ucTimHoaDon.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
+            ucTimHoaDon.OnRefreshData += UcTimHoaDon_OnRefeshData;
+        }
+
+        private void UcTimHoaDon_OnRefeshData(object sender, DataTable newData)
+        {
+            // Cập nhật DataGridView với dữ liệu mới
+            guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        private void UcTimHoaDon_OnDataUpdated(object sender, DataTable newData)
+        {
+            // Cập nhật DataGridView với dữ liệu mới
+            guna2DataGridView1.DataSource = newData;
+
+            // Kiểm tra dữ liệu trống
+            if (newData == null || newData.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy hóa đơn phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -43,18 +69,19 @@ namespace QuanLyCuaHang.All_User_Control
         private DataTable GetDataFromTable()
         {
             DataTable dataTable = new DataTable();
-            DatabaseExecute dbExec = new DatabaseExecute();
-            dbExec.Query = $"EXEC SP_Xuat_LichSuHoaDon";
-            dbExec.executeQueryDataAdapter().Fill(dataTable);
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Xuat_LichSuHoaDon";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
             return dataTable;
         }
 
         private void btn_timhoadon_Click(object sender, EventArgs e)
         {
-            //uC_XoaHoaDon1.Visible = false;
-            //panel_movinglíchuhoadon.Left = btn_timhoadon.Left;
-            //uC_TimHoaDon1.Visible = true;
-            //uC_TimHoaDon1.BringToFront();
+            uC_XoaHoaDon2.Visible = false;
             panel_movinglichsuhoadon.Left = btn_timhoadon.Left;
             uC_TimHoaDon2.Visible = true;
             uC_TimHoaDon2.BringToFront();
@@ -71,7 +98,10 @@ namespace QuanLyCuaHang.All_User_Control
             uC_XoaHoaDon2.Visible = false;
             btn_timhoadon.PerformClick();
 
-            dataGridView1.DataSource = GetDataFromTable();
+            // Đăng ký sự kiện OnDataUpdated
+            uC_TimHoaDon2.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
+            // Đăng ký sự kiện OnRefreshData
+            uC_TimHoaDon2.OnRefreshData += UcTimHoaDon_OnRefeshData;
 
             //uC_TimHoaDon1.Visible=false;
             //uC_XoaHoaDon1.Visible = false;
@@ -80,7 +110,7 @@ namespace QuanLyCuaHang.All_User_Control
 
         private void btn_xoahoadon_Click(object sender, EventArgs e)
         {
-            //uC_TimHoaDon1.Visible = false;
+            uC_TimHoaDon2.Visible = false;
             //panel_movinglíchuhoadon.Left = btn_xoahoadon.Left;
             //uC_XoaHoaDon1.Visible = true;
             //uC_XoaHoaDon1.BringToFront();

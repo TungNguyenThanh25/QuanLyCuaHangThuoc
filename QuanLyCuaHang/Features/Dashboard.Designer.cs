@@ -40,13 +40,12 @@
             this.button_khuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.btn_cuahang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_HoaDon2 = new QuanLyCuaHang.All_User_Control.UC_HoaDon();
-            this.uC_HoaDon1 = new QuanLyCuaHang.All_User_Control.UC_HoaDon();
-            this.uC_LichSuMua1 = new QuanLyCuaHang.All_User_Control.UC_LichSuMua();
-            this.uC_DoanhThu1 = new QuanLyCuaHang.All_User_Control.UC_DoanhThu();
-            this.uC_KhuyenMai1 = new QuanLyCuaHang.All_User_Control.UC_KhuyenMai();
-            this.uC_KhoHang2 = new QuanLyCuaHang.All_User_Control.UC_KhoHang();
-            this.uC_CuaHang3 = new QuanLyCuaHang.All_User_Control.UC_CuaHang();
+            this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
+            this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
+            this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
+            this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
+            this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
+            this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_dangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.timer_logout = new System.Windows.Forms.Timer(this.components);
@@ -237,7 +236,6 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2Panel2.Controls.Add(this.uC_HoaDon2);
-            this.guna2Panel2.Controls.Add(this.uC_HoaDon1);
             this.guna2Panel2.Controls.Add(this.uC_LichSuMua1);
             this.guna2Panel2.Controls.Add(this.uC_DoanhThu1);
             this.guna2Panel2.Controls.Add(this.uC_KhuyenMai1);
@@ -258,15 +256,6 @@
             this.uC_HoaDon2.Size = new System.Drawing.Size(1797, 807);
             this.uC_HoaDon2.TabIndex = 7;
             this.uC_HoaDon2.Load += new System.EventHandler(this.uC_HoaDon2_Load);
-            // 
-            // uC_HoaDon1
-            // 
-            this.uC_HoaDon1.BackColor = System.Drawing.Color.LightBlue;
-            this.uC_HoaDon1.Location = new System.Drawing.Point(-2218, 264);
-            this.uC_HoaDon1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_HoaDon1.Name = "uC_HoaDon1";
-            this.uC_HoaDon1.Size = new System.Drawing.Size(2245, 969);
-            this.uC_HoaDon1.TabIndex = 6;
             // 
             // uC_LichSuMua1
             // 
@@ -440,7 +429,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_cuahang;
         private Guna.UI2.WinForms.Guna2Panel panel_moving;
-        private All_User_Control.UC_KhoHang uC_KhoHang1;
+        private UC_KhoHang uC_KhoHang1;
        
 
 
@@ -450,24 +439,23 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
 
-        private All_User_Control.UC_CuaHang uC_CuaHang2;
-        private All_User_Control.UC_CuaHang uC_CuaHang1;
+        private UC_CuaHang uC_CuaHang2;
+        private UC_CuaHang uC_CuaHang1;
         private Guna.UI2.WinForms.Guna2Button btn_dangxuat;
         private System.Windows.Forms.Timer timer_logout;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private All_User_Control.UC_CuaHang uC_CuaHang3;
+        private UC_CuaHang uC_CuaHang3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private All_User_Control.UC_KhoHang uC_KhoHang2;
-        private All_User_Control.UC_KhuyenMai uC_KhuyenMai1;
+        private UC_KhoHang uC_KhoHang2;
+        private UC_KhuyenMai uC_KhuyenMai1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private All_User_Control.UC_DoanhThu uC_DoanhThu1;
+        private UC_DoanhThu uC_DoanhThu1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
-        private All_User_Control.UC_LichSuMua uC_LichSuMua1;
+        private UC_LichSuMua uC_LichSuMua1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
-        private All_User_Control.UC_HoaDon uC_HoaDon2;
-        private All_User_Control.UC_HoaDon uC_HoaDon1;
+        private UC_HoaDon uC_HoaDon2;
     }
 }

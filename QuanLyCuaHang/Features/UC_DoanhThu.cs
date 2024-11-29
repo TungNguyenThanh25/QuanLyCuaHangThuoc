@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace QuanLyCuaHang.All_User_Control
+namespace QuanLyCuaHang
 {
     public partial class UC_DoanhThu : UserControl
     {

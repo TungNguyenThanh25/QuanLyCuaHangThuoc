@@ -12,7 +12,7 @@ using QuanLyCuaHang.Database;
 using QuanLyCuaHang.LoginRegister;
 using System.Windows.Forms;
 
-namespace QuanLyCuaHang.Features
+namespace QuanLyCuaHang
 {
     public partial class UC_ThemSanPham : UserControl
     {

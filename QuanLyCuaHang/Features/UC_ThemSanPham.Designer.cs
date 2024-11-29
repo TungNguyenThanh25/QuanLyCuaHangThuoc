@@ -1,4 +1,4 @@
-﻿namespace QuanLyCuaHang.Features
+﻿namespace QuanLyCuaHang
 {
     partial class UC_ThemSanPham
     {
