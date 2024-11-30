@@ -42,6 +42,14 @@
             this.button_khuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.btn_cuahang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.uC_QuanLyNhanVien1 = new QuanLyCuaHang.Features.UC_QuanLyNhanVien();
+            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
+            this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
+            this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
+            this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
+            this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
+            this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
+            this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_dangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.timer_logout = new System.Windows.Forms.Timer(this.components);
@@ -55,14 +63,6 @@
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_QuanLyNhanVien1 = new QuanLyCuaHang.Features.UC_QuanLyNhanVien();
-            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
-            this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
-            this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
-            this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
-            this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
-            this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
-            this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -285,105 +285,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1348, 648);
             this.guna2Panel2.TabIndex = 3;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // btn_dangxuat
-            // 
-            this.btn_dangxuat.BorderRadius = 5;
-            this.btn_dangxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_dangxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_dangxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_dangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_dangxuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_dangxuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_dangxuat.ForeColor = System.Drawing.Color.Black;
-            this.btn_dangxuat.Location = new System.Drawing.Point(1228, 8);
-            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_dangxuat.Name = "btn_dangxuat";
-            this.btn_dangxuat.Size = new System.Drawing.Size(135, 37);
-            this.btn_dangxuat.TabIndex = 4;
-            this.btn_dangxuat.Text = "Đăng xuất";
-            this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
-            // 
-            // timer_logout
-            // 
-            this.timer_logout.Tick += new System.EventHandler(this.timer_logout_Tick);
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.TargetControl = this;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.TargetControl = this;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.TargetControl = this;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.TargetControl = this;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.TargetControl = this;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(40, 30);
-            this.guna2TextBox1.Location = new System.Drawing.Point(987, 10);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(238, 36);
-            this.guna2TextBox1.TabIndex = 5;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.TargetControl = this;
-            // 
-            // guna2Elipse8
-            // 
-            this.guna2Elipse8.TargetControl = this;
-            // 
-            // guna2Elipse9
-            // 
-            this.guna2Elipse9.TargetControl = this;
-            // 
             // uC_QuanLyNhanVien1
             // 
             this.uC_QuanLyNhanVien1.BackColor = System.Drawing.Color.AliceBlue;
@@ -459,6 +360,106 @@
             this.uC_CuaHang3.Size = new System.Drawing.Size(1348, 647);
             this.uC_CuaHang3.TabIndex = 0;
             this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // btn_dangxuat
+            // 
+            this.btn_dangxuat.BorderRadius = 5;
+            this.btn_dangxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dangxuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_dangxuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btn_dangxuat.ForeColor = System.Drawing.Color.Black;
+            this.btn_dangxuat.Location = new System.Drawing.Point(1228, 8);
+            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_dangxuat.Name = "btn_dangxuat";
+            this.btn_dangxuat.Size = new System.Drawing.Size(135, 37);
+            this.btn_dangxuat.TabIndex = 4;
+            this.btn_dangxuat.Text = "Đăng xuất";
+            this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
+            // 
+            // timer_logout
+            // 
+            this.timer_logout.Tick += new System.EventHandler(this.timer_logout_Tick);
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.TargetControl = this;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.TargetControl = this;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.TargetControl = this;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2TextBox1.BorderRadius = 5;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
+            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(40, 30);
+            this.guna2TextBox1.Location = new System.Drawing.Point(987, 10);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.ReadOnly = true;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(238, 36);
+            this.guna2TextBox1.TabIndex = 5;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.TargetControl = this;
+            // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.TargetControl = this;
+            // 
+            // guna2Elipse9
+            // 
+            this.guna2Elipse9.TargetControl = this;
             // 
             // Dashboard
             // 

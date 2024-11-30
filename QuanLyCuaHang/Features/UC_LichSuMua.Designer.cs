@@ -71,7 +71,7 @@ namespace QuanLyCuaHang
             this.D.Location = new System.Drawing.Point(34, 110);
             this.D.Margin = new System.Windows.Forms.Padding(4);
             this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(1177, 639);
+            this.D.Size = new System.Drawing.Size(921, 520);
             this.D.TabIndex = 4;
             // 
             // guna2DataGridView1
@@ -97,10 +97,10 @@ namespace QuanLyCuaHang
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(3, 11);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1171, 633);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(903, 506);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -138,9 +138,9 @@ namespace QuanLyCuaHang
             this.btn_timhoadon.FillColor = System.Drawing.Color.LightBlue;
             this.btn_timhoadon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timhoadon.ForeColor = System.Drawing.Color.Black;
-            this.btn_timhoadon.Location = new System.Drawing.Point(1268, 110);
+            this.btn_timhoadon.Location = new System.Drawing.Point(977, 96);
             this.btn_timhoadon.Name = "btn_timhoadon";
-            this.btn_timhoadon.Size = new System.Drawing.Size(228, 42);
+            this.btn_timhoadon.Size = new System.Drawing.Size(165, 42);
             this.btn_timhoadon.TabIndex = 7;
             this.btn_timhoadon.Text = "Tìm hóa đơn";
             this.btn_timhoadon.Click += new System.EventHandler(this.btn_timhoadon_Click);
@@ -148,9 +148,9 @@ namespace QuanLyCuaHang
             // panel_movinglichsuhoadon
             // 
             this.panel_movinglichsuhoadon.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel_movinglichsuhoadon.Location = new System.Drawing.Point(1268, 155);
+            this.panel_movinglichsuhoadon.Location = new System.Drawing.Point(976, 141);
             this.panel_movinglichsuhoadon.Name = "panel_movinglichsuhoadon";
-            this.panel_movinglichsuhoadon.Size = new System.Drawing.Size(228, 10);
+            this.panel_movinglichsuhoadon.Size = new System.Drawing.Size(165, 10);
             this.panel_movinglichsuhoadon.TabIndex = 9;
             this.panel_movinglichsuhoadon.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_movinglíchuhoadon_Paint);
             // 
@@ -164,9 +164,9 @@ namespace QuanLyCuaHang
             this.btn_xoahoadon.FillColor = System.Drawing.Color.LightBlue;
             this.btn_xoahoadon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoahoadon.ForeColor = System.Drawing.Color.Black;
-            this.btn_xoahoadon.Location = new System.Drawing.Point(1502, 110);
+            this.btn_xoahoadon.Location = new System.Drawing.Point(1156, 97);
             this.btn_xoahoadon.Name = "btn_xoahoadon";
-            this.btn_xoahoadon.Size = new System.Drawing.Size(228, 42);
+            this.btn_xoahoadon.Size = new System.Drawing.Size(165, 42);
             this.btn_xoahoadon.TabIndex = 10;
             this.btn_xoahoadon.Text = "Xóa hóa đơn";
             this.btn_xoahoadon.Click += new System.EventHandler(this.btn_xoahoadon_Click);
@@ -176,26 +176,26 @@ namespace QuanLyCuaHang
             this.guna2Panel4.BackColor = System.Drawing.Color.LightGray;
             this.guna2Panel4.Controls.Add(this.uC_XoaHoaDon2);
             this.guna2Panel4.Controls.Add(this.uC_TimHoaDon2);
-            this.guna2Panel4.Location = new System.Drawing.Point(1268, 171);
+            this.guna2Panel4.Location = new System.Drawing.Point(975, 157);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(463, 578);
+            this.guna2Panel4.Size = new System.Drawing.Size(349, 473);
             this.guna2Panel4.TabIndex = 0;
             // 
             // uC_XoaHoaDon2
             // 
-            this.uC_XoaHoaDon2.Location = new System.Drawing.Point(0, 0);
+            this.uC_XoaHoaDon2.Location = new System.Drawing.Point(2, 2);
             this.uC_XoaHoaDon2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_XoaHoaDon2.Name = "uC_XoaHoaDon2";
-            this.uC_XoaHoaDon2.Size = new System.Drawing.Size(463, 578);
+            this.uC_XoaHoaDon2.Size = new System.Drawing.Size(353, 473);
             this.uC_XoaHoaDon2.TabIndex = 1;
             this.uC_XoaHoaDon2.Load += new System.EventHandler(this.uC_XoaHoaDon2_Load);
             // 
             // uC_TimHoaDon2
             // 
-            this.uC_TimHoaDon2.Location = new System.Drawing.Point(0, 0);
-            this.uC_TimHoaDon2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_TimHoaDon2.Location = new System.Drawing.Point(2, 2);
+            this.uC_TimHoaDon2.Margin = new System.Windows.Forms.Padding(2);
             this.uC_TimHoaDon2.Name = "uC_TimHoaDon2";
-            this.uC_TimHoaDon2.Size = new System.Drawing.Size(463, 578);
+            this.uC_TimHoaDon2.Size = new System.Drawing.Size(353, 473);
             this.uC_TimHoaDon2.TabIndex = 0;
             this.uC_TimHoaDon2.Load += new System.EventHandler(this.uC_TimHoaDon2_Load);
             // 
@@ -217,7 +217,7 @@ namespace QuanLyCuaHang
             this.Controls.Add(this.D);
             this.Controls.Add(this.label1);
             this.Name = "UC_LichSuMua";
-            this.Size = new System.Drawing.Size(2248, 969);
+            this.Size = new System.Drawing.Size(1347, 650);
             this.Load += new System.EventHandler(this.UC_LichSuMua_Load);
             this.D.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();

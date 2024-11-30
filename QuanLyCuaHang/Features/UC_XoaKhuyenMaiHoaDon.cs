@@ -21,5 +21,10 @@ namespace QuanLyCuaHang
         {
             txt_xoamakhuyenmaihoadon.Clear();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

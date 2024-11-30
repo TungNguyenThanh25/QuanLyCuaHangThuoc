@@ -114,5 +114,10 @@ namespace QuanLyCuaHang
         {
 
         }
+
+        private void uC_DoanhThuThang1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

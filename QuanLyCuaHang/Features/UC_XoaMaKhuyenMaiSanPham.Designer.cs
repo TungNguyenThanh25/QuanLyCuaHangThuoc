@@ -48,9 +48,9 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(621, 531);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(576, 520);
             this.guna2CustomGradientPanel1.TabIndex = 4;
             // 
             // btn_huyxoamakhuyenmaisanpham
@@ -67,7 +67,7 @@
             this.btn_huyxoamakhuyenmaisanpham.FillColor = System.Drawing.Color.Transparent;
             this.btn_huyxoamakhuyenmaisanpham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huyxoamakhuyenmaisanpham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_huyxoamakhuyenmaisanpham.Location = new System.Drawing.Point(260, 479);
+            this.btn_huyxoamakhuyenmaisanpham.Location = new System.Drawing.Point(235, 451);
             this.btn_huyxoamakhuyenmaisanpham.Name = "btn_huyxoamakhuyenmaisanpham";
             this.btn_huyxoamakhuyenmaisanpham.Size = new System.Drawing.Size(69, 38);
             this.btn_huyxoamakhuyenmaisanpham.TabIndex = 98;
@@ -84,10 +84,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Red;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(57, 438);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(57, 409);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(504, 37);
+            this.guna2Button1.Size = new System.Drawing.Size(434, 37);
             this.guna2Button1.TabIndex = 70;
             this.guna2Button1.Text = "Xóa mã khuyến mãi";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -107,11 +107,12 @@
             this.txt_xoamakhuyenmaisanpham.ForeColor = System.Drawing.Color.Black;
             this.txt_xoamakhuyenmaisanpham.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_xoamakhuyenmaisanpham.Location = new System.Drawing.Point(57, 194);
+            this.txt_xoamakhuyenmaisanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_xoamakhuyenmaisanpham.Name = "txt_xoamakhuyenmaisanpham";
             this.txt_xoamakhuyenmaisanpham.PasswordChar = '\0';
             this.txt_xoamakhuyenmaisanpham.PlaceholderText = "";
             this.txt_xoamakhuyenmaisanpham.SelectedText = "";
-            this.txt_xoamakhuyenmaisanpham.Size = new System.Drawing.Size(504, 29);
+            this.txt_xoamakhuyenmaisanpham.Size = new System.Drawing.Size(434, 29);
             this.txt_xoamakhuyenmaisanpham.TabIndex = 47;
             // 
             // label3
@@ -129,7 +130,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 14);
+            this.label2.Location = new System.Drawing.Point(166, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 25);
@@ -147,7 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_XoaMaKhuyenMaiSanPham";
             this.Size = new System.Drawing.Size(1294, 531);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

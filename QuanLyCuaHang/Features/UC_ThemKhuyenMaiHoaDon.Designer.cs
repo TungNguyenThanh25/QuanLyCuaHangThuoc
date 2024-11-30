@@ -72,7 +72,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.label16);
             this.guna2CustomGradientPanel1.Controls.Add(this.label17);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(2, 2);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(621, 531);
             this.guna2CustomGradientPanel1.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.btn_huythemkhuyenmaihoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huythemkhuyenmaihoadon.ForeColor = System.Drawing.Color.Firebrick;
             this.btn_huythemkhuyenmaihoadon.Location = new System.Drawing.Point(238, 482);
-            this.btn_huythemkhuyenmaihoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_huythemkhuyenmaihoadon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_huythemkhuyenmaihoadon.Name = "btn_huythemkhuyenmaihoadon";
             this.btn_huythemkhuyenmaihoadon.Size = new System.Drawing.Size(70, 39);
             this.btn_huythemkhuyenmaihoadon.TabIndex = 96;
@@ -105,7 +105,7 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.Location = new System.Drawing.Point(26, 444);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(512, 37);
             this.guna2Button3.TabIndex = 71;
@@ -126,6 +126,7 @@
             this.txt_giamtoidahdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_giamtoidahdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_giamtoidahdthem.Location = new System.Drawing.Point(234, 383);
+            this.txt_giamtoidahdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_giamtoidahdthem.Name = "txt_giamtoidahdthem";
             this.txt_giamtoidahdthem.PasswordChar = '\0';
             this.txt_giamtoidahdthem.PlaceholderText = "";
@@ -149,6 +150,7 @@
             this.txt_phantramgiamhdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_phantramgiamhdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_phantramgiamhdthem.Location = new System.Drawing.Point(234, 331);
+            this.txt_phantramgiamhdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_phantramgiamhdthem.Name = "txt_phantramgiamhdthem";
             this.txt_phantramgiamhdthem.PasswordChar = '\0';
             this.txt_phantramgiamhdthem.PlaceholderText = "";
@@ -172,6 +174,7 @@
             this.txt_donhangtoithieuhoadonthem.ForeColor = System.Drawing.Color.Black;
             this.txt_donhangtoithieuhoadonthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_donhangtoithieuhoadonthem.Location = new System.Drawing.Point(234, 279);
+            this.txt_donhangtoithieuhoadonthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_donhangtoithieuhoadonthem.Name = "txt_donhangtoithieuhoadonthem";
             this.txt_donhangtoithieuhoadonthem.PasswordChar = '\0';
             this.txt_donhangtoithieuhoadonthem.PlaceholderText = "";
@@ -195,6 +198,7 @@
             this.txt_ngayketthuckhuyenmaihdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_ngayketthuckhuyenmaihdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_ngayketthuckhuyenmaihdthem.Location = new System.Drawing.Point(234, 226);
+            this.txt_ngayketthuckhuyenmaihdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ngayketthuckhuyenmaihdthem.Name = "txt_ngayketthuckhuyenmaihdthem";
             this.txt_ngayketthuckhuyenmaihdthem.PasswordChar = '\0';
             this.txt_ngayketthuckhuyenmaihdthem.PlaceholderText = "";
@@ -218,6 +222,7 @@
             this.txt_ngaybatdaukhuyenmaihdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_ngaybatdaukhuyenmaihdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_ngaybatdaukhuyenmaihdthem.Location = new System.Drawing.Point(234, 176);
+            this.txt_ngaybatdaukhuyenmaihdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ngaybatdaukhuyenmaihdthem.Name = "txt_ngaybatdaukhuyenmaihdthem";
             this.txt_ngaybatdaukhuyenmaihdthem.PasswordChar = '\0';
             this.txt_ngaybatdaukhuyenmaihdthem.PlaceholderText = "";
@@ -241,6 +246,7 @@
             this.txt_soluongmakhuyenmaihdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_soluongmakhuyenmaihdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_soluongmakhuyenmaihdthem.Location = new System.Drawing.Point(234, 128);
+            this.txt_soluongmakhuyenmaihdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_soluongmakhuyenmaihdthem.Name = "txt_soluongmakhuyenmaihdthem";
             this.txt_soluongmakhuyenmaihdthem.PasswordChar = '\0';
             this.txt_soluongmakhuyenmaihdthem.PlaceholderText = "";
@@ -264,6 +270,7 @@
             this.txt_makhuyenmaihdthem.ForeColor = System.Drawing.Color.Black;
             this.txt_makhuyenmaihdthem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_makhuyenmaihdthem.Location = new System.Drawing.Point(234, 80);
+            this.txt_makhuyenmaihdthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_makhuyenmaihdthem.Name = "txt_makhuyenmaihdthem";
             this.txt_makhuyenmaihdthem.PasswordChar = '\0';
             this.txt_makhuyenmaihdthem.PlaceholderText = "";
@@ -370,9 +377,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_ThemKhuyenMaiHoaDon";
-            this.Size = new System.Drawing.Size(1617, 663);
+            this.Size = new System.Drawing.Size(623, 536);
             this.Load += new System.EventHandler(this.UC_ThemKhuyenMaiHoaDon_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();

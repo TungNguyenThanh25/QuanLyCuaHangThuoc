@@ -148,5 +148,10 @@ namespace QuanLyCuaHang
         {
 
         }
+
+        private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
