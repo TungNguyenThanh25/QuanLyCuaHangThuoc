@@ -218,3 +218,8 @@ D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_ThayDo
 D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_ThemKhachHang.resources
 D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_TimKhachHang.resources
 D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_XoaKhachHang.resources
+D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_QuanLyNhanVien.resources
+D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_ThayDoiThongTinNhanVien.resources
+D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_ThemNhanVien.resources
+D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_TimNhanVien.resources
+D:\SofwareEngineering\R\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.Features.UC_XoaNhanVien.resources

@@ -34,6 +34,8 @@
             this.btn_kho = new Guna.UI2.WinForms.Guna2Button();
             this.btn_hoadon = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.button_quanlynhanvien = new Guna.UI2.WinForms.Guna2Button();
+            this.button_quanlykhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.panel_moving = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_lichsumua = new Guna.UI2.WinForms.Guna2Button();
             this.button_doanhthu = new Guna.UI2.WinForms.Guna2Button();
@@ -51,16 +53,16 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.button_quanlykhachhang = new Guna.UI2.WinForms.Guna2Button();
-            this.button_quanlynhanvien = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_QuanLyNhanVien1 = new QuanLyCuaHang.Features.UC_QuanLyNhanVien();
+            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
             this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
             this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
             this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
             this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
             this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
             this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
-            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +146,46 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1800, 71);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // button_quanlynhanvien
+            // 
+            this.button_quanlynhanvien.BackColor = System.Drawing.Color.Transparent;
+            this.button_quanlynhanvien.BorderRadius = 3;
+            this.button_quanlynhanvien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_quanlynhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlynhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlynhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_quanlynhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_quanlynhanvien.FillColor = System.Drawing.Color.LightBlue;
+            this.button_quanlynhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_quanlynhanvien.ForeColor = System.Drawing.Color.Black;
+            this.button_quanlynhanvien.Location = new System.Drawing.Point(1579, 4);
+            this.button_quanlynhanvien.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlynhanvien.Name = "button_quanlynhanvien";
+            this.button_quanlynhanvien.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlynhanvien.TabIndex = 10;
+            this.button_quanlynhanvien.Text = "Quản lý nhân viên";
+            this.button_quanlynhanvien.Click += new System.EventHandler(this.button_quanlynhanvien_Click);
+            // 
+            // button_quanlykhachhang
+            // 
+            this.button_quanlykhachhang.BackColor = System.Drawing.Color.Transparent;
+            this.button_quanlykhachhang.BorderRadius = 3;
+            this.button_quanlykhachhang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_quanlykhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlykhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlykhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_quanlykhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_quanlykhachhang.FillColor = System.Drawing.Color.LightBlue;
+            this.button_quanlykhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_quanlykhachhang.ForeColor = System.Drawing.Color.Black;
+            this.button_quanlykhachhang.Location = new System.Drawing.Point(1355, 4);
+            this.button_quanlykhachhang.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlykhachhang.Name = "button_quanlykhachhang";
+            this.button_quanlykhachhang.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlykhachhang.TabIndex = 9;
+            this.button_quanlykhachhang.Text = "Quản lý khách hàng";
+            this.button_quanlykhachhang.Click += new System.EventHandler(this.button_quanlykhachhang_Click);
             // 
             // panel_moving
             // 
@@ -241,6 +283,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2Panel2.Controls.Add(this.uC_QuanLyNhanVien1);
             this.guna2Panel2.Controls.Add(this.uC_QuanLyKhachHang1);
             this.guna2Panel2.Controls.Add(this.uC_HoaDon2);
             this.guna2Panel2.Controls.Add(this.uC_LichSuMua1);
@@ -346,48 +389,27 @@
             // 
             this.guna2Elipse7.TargetControl = this;
             // 
-            // button_quanlykhachhang
-            // 
-            this.button_quanlykhachhang.BackColor = System.Drawing.Color.Transparent;
-            this.button_quanlykhachhang.BorderRadius = 3;
-            this.button_quanlykhachhang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.button_quanlykhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_quanlykhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_quanlykhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_quanlykhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_quanlykhachhang.FillColor = System.Drawing.Color.LightBlue;
-            this.button_quanlykhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_quanlykhachhang.ForeColor = System.Drawing.Color.Black;
-            this.button_quanlykhachhang.Location = new System.Drawing.Point(1355, 4);
-            this.button_quanlykhachhang.Margin = new System.Windows.Forms.Padding(4);
-            this.button_quanlykhachhang.Name = "button_quanlykhachhang";
-            this.button_quanlykhachhang.Size = new System.Drawing.Size(220, 43);
-            this.button_quanlykhachhang.TabIndex = 9;
-            this.button_quanlykhachhang.Text = "Quản lý khách hàng";
-            this.button_quanlykhachhang.Click += new System.EventHandler(this.button_quanlykhachhang_Click);
-            // 
-            // button_quanlynhanvien
-            // 
-            this.button_quanlynhanvien.BackColor = System.Drawing.Color.Transparent;
-            this.button_quanlynhanvien.BorderRadius = 3;
-            this.button_quanlynhanvien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.button_quanlynhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_quanlynhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_quanlynhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_quanlynhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_quanlynhanvien.FillColor = System.Drawing.Color.LightBlue;
-            this.button_quanlynhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_quanlynhanvien.ForeColor = System.Drawing.Color.Black;
-            this.button_quanlynhanvien.Location = new System.Drawing.Point(1579, 4);
-            this.button_quanlynhanvien.Margin = new System.Windows.Forms.Padding(4);
-            this.button_quanlynhanvien.Name = "button_quanlynhanvien";
-            this.button_quanlynhanvien.Size = new System.Drawing.Size(220, 43);
-            this.button_quanlynhanvien.TabIndex = 10;
-            this.button_quanlynhanvien.Text = "Quản lý nhân viên";
-            // 
             // guna2Elipse8
             // 
             this.guna2Elipse8.TargetControl = this;
+            // 
+            // guna2Elipse9
+            // 
+            this.guna2Elipse9.TargetControl = this;
+            // 
+            // uC_QuanLyNhanVien1
+            // 
+            this.uC_QuanLyNhanVien1.Location = new System.Drawing.Point(-1, 5);
+            this.uC_QuanLyNhanVien1.Name = "uC_QuanLyNhanVien1";
+            this.uC_QuanLyNhanVien1.Size = new System.Drawing.Size(1796, 800);
+            this.uC_QuanLyNhanVien1.TabIndex = 9;
+            // 
+            // uC_QuanLyKhachHang1
+            // 
+            this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
+            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1796, 800);
+            this.uC_QuanLyKhachHang1.TabIndex = 8;
             // 
             // uC_HoaDon2
             // 
@@ -446,13 +468,6 @@
             this.uC_CuaHang3.Size = new System.Drawing.Size(1797, 796);
             this.uC_CuaHang3.TabIndex = 0;
             this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
-            // 
-            // uC_QuanLyKhachHang1
-            // 
-            this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(1, 0);
-            this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
-            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1796, 800);
-            this.uC_QuanLyKhachHang1.TabIndex = 8;
             // 
             // Dashboard
             // 
@@ -518,5 +533,7 @@
         private Guna.UI2.WinForms.Guna2Button button_quanlykhachhang;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private Features.UC_QuanLyKhachHang uC_QuanLyKhachHang1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
+        private Features.UC_QuanLyNhanVien uC_QuanLyNhanVien1;
     }
 }
