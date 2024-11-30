@@ -42,6 +42,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
             btn_cuahang.PerformClick();
 
             if (User.username == "sa")
@@ -67,6 +68,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = btn_kho.Left + 1;
             uC_KhoHang2.Visible = true;
@@ -81,6 +83,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = btn_hoadon.Left + 1;
             //uC_HoaDon1.Visible = true;
@@ -98,6 +101,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = btn_cuahang.Left + 0;
             uC_CuaHang3.Visible = true;
@@ -112,6 +116,7 @@ namespace QuanLyCuaHang
             //uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = button_khuyenmai.Left + 1;
             uC_KhuyenMai1.Visible = true;
@@ -131,6 +136,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             //uC_DoanhThu1.Visible = false;
             uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = button_doanhthu.Left + 1;
             uC_DoanhThu1.Visible = true;
@@ -146,6 +152,7 @@ namespace QuanLyCuaHang
             uC_KhuyenMai1.Visible = false;
             uC_DoanhThu1.Visible = false;
             //uC_LichSuMua1.Visible = false;
+            uC_QuanLyKhachHang1.Visible = false;
 
             panel_moving.Left = btn_lichsumua.Left + 1;
             uC_LichSuMua1.Visible = true;
@@ -259,6 +266,21 @@ namespace QuanLyCuaHang
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button_quanlykhachhang_Click(object sender, EventArgs e)
+        {
+            uC_CuaHang3.Visible = false;
+            //uC_HoaDon1.Visible = false;
+            uC_HoaDon2.Visible = false;
+            uC_KhoHang2.Visible = false;
+            uC_KhuyenMai1.Visible = false;
+            uC_DoanhThu1.Visible = false;
+            uC_LichSuMua1.Visible = false;
+            
+            panel_moving.Left = button_quanlykhachhang.Left;
+            uC_QuanLyKhachHang1.Visible = true;
+            uC_QuanLyKhachHang1.BringToFront();
         }
     }
 }

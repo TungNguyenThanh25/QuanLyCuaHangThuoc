@@ -51,12 +51,16 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.button_quanlykhachhang = new Guna.UI2.WinForms.Guna2Button();
+            this.button_quanlynhanvien = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
             this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
             this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
             this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
             this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
             this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
+            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,10 +95,10 @@
             this.btn_kho.FillColor = System.Drawing.Color.LightBlue;
             this.btn_kho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kho.ForeColor = System.Drawing.Color.Black;
-            this.btn_kho.Location = new System.Drawing.Point(607, 4);
+            this.btn_kho.Location = new System.Drawing.Point(453, 4);
             this.btn_kho.Margin = new System.Windows.Forms.Padding(4);
             this.btn_kho.Name = "btn_kho";
-            this.btn_kho.Size = new System.Drawing.Size(300, 43);
+            this.btn_kho.Size = new System.Drawing.Size(220, 43);
             this.btn_kho.TabIndex = 1;
             this.btn_kho.Text = "Kho";
             this.btn_kho.Click += new System.EventHandler(this.btn_kho_Click);
@@ -111,10 +115,10 @@
             this.btn_hoadon.FillColor = System.Drawing.Color.LightBlue;
             this.btn_hoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hoadon.ForeColor = System.Drawing.Color.Black;
-            this.btn_hoadon.Location = new System.Drawing.Point(304, 4);
+            this.btn_hoadon.Location = new System.Drawing.Point(227, 4);
             this.btn_hoadon.Margin = new System.Windows.Forms.Padding(4);
             this.btn_hoadon.Name = "btn_hoadon";
-            this.btn_hoadon.Size = new System.Drawing.Size(300, 43);
+            this.btn_hoadon.Size = new System.Drawing.Size(220, 43);
             this.btn_hoadon.TabIndex = 2;
             this.btn_hoadon.Text = "Hóa Đơn";
             this.btn_hoadon.Click += new System.EventHandler(this.btn_hoadon_Click);
@@ -124,6 +128,8 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel1.Controls.Add(this.button_quanlynhanvien);
+            this.guna2Panel1.Controls.Add(this.button_quanlykhachhang);
             this.guna2Panel1.Controls.Add(this.btn_kho);
             this.guna2Panel1.Controls.Add(this.panel_moving);
             this.guna2Panel1.Controls.Add(this.btn_hoadon);
@@ -135,7 +141,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(19, 64);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1816, 71);
+            this.guna2Panel1.Size = new System.Drawing.Size(1800, 71);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -147,7 +153,7 @@
             this.panel_moving.Location = new System.Drawing.Point(1, 50);
             this.panel_moving.Margin = new System.Windows.Forms.Padding(4);
             this.panel_moving.Name = "panel_moving";
-            this.panel_moving.Size = new System.Drawing.Size(300, 12);
+            this.panel_moving.Size = new System.Drawing.Size(220, 12);
             this.panel_moving.TabIndex = 6;
             this.panel_moving.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_moving_Paint);
             // 
@@ -163,10 +169,10 @@
             this.btn_lichsumua.FillColor = System.Drawing.Color.LightBlue;
             this.btn_lichsumua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lichsumua.ForeColor = System.Drawing.Color.Black;
-            this.btn_lichsumua.Location = new System.Drawing.Point(1213, 4);
+            this.btn_lichsumua.Location = new System.Drawing.Point(905, 4);
             this.btn_lichsumua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_lichsumua.Name = "btn_lichsumua";
-            this.btn_lichsumua.Size = new System.Drawing.Size(300, 43);
+            this.btn_lichsumua.Size = new System.Drawing.Size(220, 43);
             this.btn_lichsumua.TabIndex = 8;
             this.btn_lichsumua.Text = "Lịch sử hóa đơn";
             this.btn_lichsumua.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -183,10 +189,10 @@
             this.button_doanhthu.FillColor = System.Drawing.Color.LightBlue;
             this.button_doanhthu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_doanhthu.ForeColor = System.Drawing.Color.Black;
-            this.button_doanhthu.Location = new System.Drawing.Point(1516, 4);
+            this.button_doanhthu.Location = new System.Drawing.Point(1130, 4);
             this.button_doanhthu.Margin = new System.Windows.Forms.Padding(4);
             this.button_doanhthu.Name = "button_doanhthu";
-            this.button_doanhthu.Size = new System.Drawing.Size(300, 43);
+            this.button_doanhthu.Size = new System.Drawing.Size(220, 43);
             this.button_doanhthu.TabIndex = 7;
             this.button_doanhthu.Text = "Doanh Thu";
             this.button_doanhthu.Click += new System.EventHandler(this.button_doanhthu_Click);
@@ -203,10 +209,10 @@
             this.button_khuyenmai.FillColor = System.Drawing.Color.LightBlue;
             this.button_khuyenmai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_khuyenmai.ForeColor = System.Drawing.Color.Black;
-            this.button_khuyenmai.Location = new System.Drawing.Point(909, 4);
+            this.button_khuyenmai.Location = new System.Drawing.Point(679, 4);
             this.button_khuyenmai.Margin = new System.Windows.Forms.Padding(4);
             this.button_khuyenmai.Name = "button_khuyenmai";
-            this.button_khuyenmai.Size = new System.Drawing.Size(300, 43);
+            this.button_khuyenmai.Size = new System.Drawing.Size(220, 43);
             this.button_khuyenmai.TabIndex = 6;
             this.button_khuyenmai.Text = "Khuyến mãi";
             this.button_khuyenmai.Click += new System.EventHandler(this.button_khuyenmai_Click);
@@ -226,7 +232,7 @@
             this.btn_cuahang.Location = new System.Drawing.Point(1, 4);
             this.btn_cuahang.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cuahang.Name = "btn_cuahang";
-            this.btn_cuahang.Size = new System.Drawing.Size(300, 43);
+            this.btn_cuahang.Size = new System.Drawing.Size(220, 43);
             this.btn_cuahang.TabIndex = 4;
             this.btn_cuahang.Text = "Cửa Hàng";
             this.btn_cuahang.Click += new System.EventHandler(this.btn_cuahang_Click);
@@ -235,6 +241,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2Panel2.Controls.Add(this.uC_QuanLyKhachHang1);
             this.guna2Panel2.Controls.Add(this.uC_HoaDon2);
             this.guna2Panel2.Controls.Add(this.uC_LichSuMua1);
             this.guna2Panel2.Controls.Add(this.uC_DoanhThu1);
@@ -339,6 +346,49 @@
             // 
             this.guna2Elipse7.TargetControl = this;
             // 
+            // button_quanlykhachhang
+            // 
+            this.button_quanlykhachhang.BackColor = System.Drawing.Color.Transparent;
+            this.button_quanlykhachhang.BorderRadius = 3;
+            this.button_quanlykhachhang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_quanlykhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlykhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlykhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_quanlykhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_quanlykhachhang.FillColor = System.Drawing.Color.LightBlue;
+            this.button_quanlykhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_quanlykhachhang.ForeColor = System.Drawing.Color.Black;
+            this.button_quanlykhachhang.Location = new System.Drawing.Point(1355, 4);
+            this.button_quanlykhachhang.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlykhachhang.Name = "button_quanlykhachhang";
+            this.button_quanlykhachhang.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlykhachhang.TabIndex = 9;
+            this.button_quanlykhachhang.Text = "Quản lý khách hàng";
+            this.button_quanlykhachhang.Click += new System.EventHandler(this.button_quanlykhachhang_Click);
+            // 
+            // button_quanlynhanvien
+            // 
+            this.button_quanlynhanvien.BackColor = System.Drawing.Color.Transparent;
+            this.button_quanlynhanvien.BorderRadius = 3;
+            this.button_quanlynhanvien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_quanlynhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlynhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_quanlynhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_quanlynhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_quanlynhanvien.FillColor = System.Drawing.Color.LightBlue;
+            this.button_quanlynhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_quanlynhanvien.ForeColor = System.Drawing.Color.Black;
+            this.button_quanlynhanvien.Location = new System.Drawing.Point(1579, 4);
+            this.button_quanlynhanvien.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlynhanvien.Name = "button_quanlynhanvien";
+            this.button_quanlynhanvien.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlynhanvien.TabIndex = 10;
+            this.button_quanlynhanvien.Text = "Quản lý nhân viên";
+            // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.TargetControl = this;
+            // 
             // uC_HoaDon2
             // 
             this.uC_HoaDon2.BackColor = System.Drawing.Color.LightBlue;
@@ -396,6 +446,13 @@
             this.uC_CuaHang3.Size = new System.Drawing.Size(1797, 796);
             this.uC_CuaHang3.TabIndex = 0;
             this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
+            // 
+            // uC_QuanLyKhachHang1
+            // 
+            this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(1, 0);
+            this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
+            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1796, 800);
+            this.uC_QuanLyKhachHang1.TabIndex = 8;
             // 
             // Dashboard
             // 
@@ -457,5 +514,9 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private UC_HoaDon uC_HoaDon2;
+        private Guna.UI2.WinForms.Guna2Button button_quanlynhanvien;
+        private Guna.UI2.WinForms.Guna2Button button_quanlykhachhang;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
+        private Features.UC_QuanLyKhachHang uC_QuanLyKhachHang1;
     }
 }

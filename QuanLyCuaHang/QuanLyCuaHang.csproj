@@ -105,11 +105,29 @@
       <DependentUpon>connect.dbml</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseExecute.cs" />
+    <Compile Include="Features\UC_QuanLyKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\UC_QuanLyKhachHang.Designer.cs">
+      <DependentUpon>UC_QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\UC_SuaSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Features\UC_SuaSanPham.Designer.cs">
       <DependentUpon>UC_SuaSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\UC_ThayDoiThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\UC_ThayDoiThongTinKhachHang.Designer.cs">
+      <DependentUpon>UC_ThayDoiThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\UC_ThemKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\UC_ThemKhachHang.Designer.cs">
+      <DependentUpon>UC_ThemKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\UC_ThemKhuyenMaiHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -135,11 +153,23 @@
     <Compile Include="Features\UC_TimHoaDon.Designer.cs">
       <DependentUpon>UC_TimHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\UC_TimKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\UC_TimKhachHang.Designer.cs">
+      <DependentUpon>UC_TimKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\UC_XoaHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Features\UC_XoaHoaDon.Designer.cs">
       <DependentUpon>UC_XoaHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\UC_XoaKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\UC_XoaKhachHang.Designer.cs">
+      <DependentUpon>UC_XoaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\UC_XoaKhuyenMaiHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -213,8 +243,17 @@
     <EmbeddedResource Include="Features\UC_HoaDon.resx">
       <DependentUpon>UC_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\UC_QuanLyKhachHang.resx">
+      <DependentUpon>UC_QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\UC_SuaSanPham.resx">
       <DependentUpon>UC_SuaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\UC_ThayDoiThongTinKhachHang.resx">
+      <DependentUpon>UC_ThayDoiThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\UC_ThemKhachHang.resx">
+      <DependentUpon>UC_ThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\UC_ThemKhuyenMaiHoaDon.resx">
       <DependentUpon>UC_ThemKhuyenMaiHoaDon.cs</DependentUpon>
@@ -228,8 +267,14 @@
     <EmbeddedResource Include="Features\UC_TimHoaDon.resx">
       <DependentUpon>UC_TimHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\UC_TimKhachHang.resx">
+      <DependentUpon>UC_TimKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\UC_XoaHoaDon.resx">
       <DependentUpon>UC_XoaHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\UC_XoaKhachHang.resx">
+      <DependentUpon>UC_XoaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\UC_XoaKhuyenMaiHoaDon.resx">
       <DependentUpon>UC_XoaKhuyenMaiHoaDon.cs</DependentUpon>
