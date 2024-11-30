@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.btn_huyxoathongtinkhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_xoathongtinkhachhang = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_sodienthoaikhachhangcanxoa = new Guna.UI2.WinForms.Guna2TextBox();
             this.combobox_gioitinhkhachhangcanxoa = new System.Windows.Forms.ComboBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_tenkhachhangcanxoa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_huyxoathongtinkhachhang
@@ -50,8 +50,8 @@
             this.btn_huyxoathongtinkhachhang.FillColor = System.Drawing.Color.Transparent;
             this.btn_huyxoathongtinkhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huyxoathongtinkhachhang.ForeColor = System.Drawing.Color.Red;
-            this.btn_huyxoathongtinkhachhang.Location = new System.Drawing.Point(294, 420);
-            this.btn_huyxoathongtinkhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_huyxoathongtinkhachhang.Location = new System.Drawing.Point(281, 420);
+            this.btn_huyxoathongtinkhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_huyxoathongtinkhachhang.Name = "btn_huyxoathongtinkhachhang";
             this.btn_huyxoathongtinkhachhang.Size = new System.Drawing.Size(70, 37);
             this.btn_huyxoathongtinkhachhang.TabIndex = 38;
@@ -68,22 +68,11 @@
             this.btn_xoathongtinkhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoathongtinkhachhang.ForeColor = System.Drawing.Color.Black;
             this.btn_xoathongtinkhachhang.Location = new System.Drawing.Point(99, 379);
-            this.btn_xoathongtinkhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_xoathongtinkhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xoathongtinkhachhang.Name = "btn_xoathongtinkhachhang";
             this.btn_xoathongtinkhachhang.Size = new System.Drawing.Size(459, 37);
             this.btn_xoathongtinkhachhang.TabIndex = 37;
             this.btn_xoathongtinkhachhang.Text = "Xóa khách hàng";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(100, 256);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(94, 22);
-            this.guna2HtmlLabel6.TabIndex = 36;
-            this.guna2HtmlLabel6.Text = "Số điện thoại";
             // 
             // txt_sodienthoaikhachhangcanxoa
             // 
@@ -117,28 +106,6 @@
             this.combobox_gioitinhkhachhangcanxoa.Size = new System.Drawing.Size(459, 21);
             this.combobox_gioitinhkhachhangcanxoa.TabIndex = 34;
             // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(100, 180);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(66, 22);
-            this.guna2HtmlLabel4.TabIndex = 33;
-            this.guna2HtmlLabel4.Text = "Giới Tính";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(100, 100);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(113, 22);
-            this.guna2HtmlLabel2.TabIndex = 32;
-            this.guna2HtmlLabel2.Text = "Tên khách hàng";
-            // 
             // txt_tenkhachhangcanxoa
             // 
             this.txt_tenkhachhangcanxoa.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -159,36 +126,65 @@
             this.txt_tenkhachhangcanxoa.Size = new System.Drawing.Size(459, 30);
             this.txt_tenkhachhangcanxoa.TabIndex = 31;
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(217, 27);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(189, 31);
-            this.guna2HtmlLabel1.TabIndex = 30;
-            this.guna2HtmlLabel1.Text = "Xóa khách hàng";
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this.txt_tenkhachhangcanxoa;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(105, 257);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 18);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Số điện thoại";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(105, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 18);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Giới tính";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(105, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 18);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Tên khách hàng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(217, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 29);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Xóa khách hàng";
             // 
             // UC_XoaKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_huyxoathongtinkhachhang);
             this.Controls.Add(this.btn_xoathongtinkhachhang);
-            this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.txt_sodienthoaikhachhangcanxoa);
             this.Controls.Add(this.combobox_gioitinhkhachhangcanxoa);
-            this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.txt_tenkhachhangcanxoa);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_XoaKhachHang";
             this.Size = new System.Drawing.Size(640, 507);
             this.ResumeLayout(false);
@@ -200,13 +196,13 @@
 
         private Guna.UI2.WinForms.Guna2Button btn_huyxoathongtinkhachhang;
         private Guna.UI2.WinForms.Guna2Button btn_xoathongtinkhachhang;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox txt_sodienthoaikhachhangcanxoa;
         private System.Windows.Forms.ComboBox combobox_gioitinhkhachhangcanxoa;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_tenkhachhangcanxoa;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }

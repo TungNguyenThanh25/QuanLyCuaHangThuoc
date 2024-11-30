@@ -36,5 +36,10 @@ namespace QuanLyCuaHang.Features
             combobox_gioitinhnhanviencanthem.Items.Clear();
             combobox_loainhanviencanthem.Items.Clear();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

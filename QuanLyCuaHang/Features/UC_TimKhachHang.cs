@@ -23,5 +23,10 @@ namespace QuanLyCuaHang.Features
             txt_tenkhachhangcantim.Clear();
             combobox_gioitinhkhachhangcantim.Items.Clear();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

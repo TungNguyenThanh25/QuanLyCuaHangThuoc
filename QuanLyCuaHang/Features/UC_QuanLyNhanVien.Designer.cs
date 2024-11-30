@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel_movingquanlynhanvien = new Guna.UI2.WinForms.Guna2Panel();
@@ -48,27 +47,16 @@
             this.uC_ThayDoiThongTinNhanVien1 = new QuanLyCuaHang.Features.UC_ThayDoiThongTinNhanVien();
             this.uC_TimNhanVien1 = new QuanLyCuaHang.Features.UC_TimNhanVien();
             this.uC_ThemNhanVien1 = new QuanLyCuaHang.Features.UC_ThemNhanVien();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(500, 14);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(237, 33);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Quản lý nhân viên";
-            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(23, 67);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(746, 555);
             this.guna2Panel1.TabIndex = 1;
@@ -81,7 +69,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_timnhanvien);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_themnhanvien);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(773, 67);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(557, 44);
             this.guna2CustomGradientPanel1.TabIndex = 2;
@@ -90,7 +78,7 @@
             // 
             this.panel_movingquanlynhanvien.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel_movingquanlynhanvien.Location = new System.Drawing.Point(2, 36);
-            this.panel_movingquanlynhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_movingquanlynhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.panel_movingquanlynhanvien.Name = "panel_movingquanlynhanvien";
             this.panel_movingquanlynhanvien.Size = new System.Drawing.Size(136, 8);
             this.panel_movingquanlynhanvien.TabIndex = 0;
@@ -107,7 +95,7 @@
             this.btn_xoanhanvien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoanhanvien.ForeColor = System.Drawing.Color.Black;
             this.btn_xoanhanvien.Location = new System.Drawing.Point(421, 2);
-            this.btn_xoanhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_xoanhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_xoanhanvien.Name = "btn_xoanhanvien";
             this.btn_xoanhanvien.Size = new System.Drawing.Size(136, 32);
             this.btn_xoanhanvien.TabIndex = 3;
@@ -125,11 +113,11 @@
             this.btn_suathongtinnhanvien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_suathongtinnhanvien.ForeColor = System.Drawing.Color.Black;
             this.btn_suathongtinnhanvien.Location = new System.Drawing.Point(280, 2);
-            this.btn_suathongtinnhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_suathongtinnhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_suathongtinnhanvien.Name = "btn_suathongtinnhanvien";
             this.btn_suathongtinnhanvien.Size = new System.Drawing.Size(136, 32);
             this.btn_suathongtinnhanvien.TabIndex = 2;
-            this.btn_suathongtinnhanvien.Text = "Thay đổi thông tin";
+            this.btn_suathongtinnhanvien.Text = "Sửa thông tin";
             this.btn_suathongtinnhanvien.Click += new System.EventHandler(this.btn_suathongtinnhanvien_Click);
             // 
             // btn_timnhanvien
@@ -143,7 +131,7 @@
             this.btn_timnhanvien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timnhanvien.ForeColor = System.Drawing.Color.Black;
             this.btn_timnhanvien.Location = new System.Drawing.Point(140, 2);
-            this.btn_timnhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_timnhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_timnhanvien.Name = "btn_timnhanvien";
             this.btn_timnhanvien.Size = new System.Drawing.Size(136, 32);
             this.btn_timnhanvien.TabIndex = 1;
@@ -161,7 +149,7 @@
             this.btn_themnhanvien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themnhanvien.ForeColor = System.Drawing.Color.Black;
             this.btn_themnhanvien.Location = new System.Drawing.Point(1, 2);
-            this.btn_themnhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_themnhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btn_themnhanvien.Name = "btn_themnhanvien";
             this.btn_themnhanvien.Size = new System.Drawing.Size(136, 32);
             this.btn_themnhanvien.TabIndex = 0;
@@ -175,7 +163,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.uC_TimNhanVien1);
             this.guna2CustomGradientPanel2.Controls.Add(this.uC_ThemNhanVien1);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(773, 116);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(557, 506);
             this.guna2CustomGradientPanel2.TabIndex = 3;
@@ -241,16 +229,26 @@
             this.uC_ThemNhanVien1.Size = new System.Drawing.Size(557, 506);
             this.uC_ThemNhanVien1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(574, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(266, 40);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Quản lý nhân viên";
+            // 
             // UC_QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_QuanLyNhanVien";
             this.Size = new System.Drawing.Size(1347, 650);
             this.Load += new System.EventHandler(this.UC_QuanLyNhanVien_Load);
@@ -262,8 +260,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -282,5 +278,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private UC_XoaNhanVien uC_XoaNhanVien1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.Label label1;
     }
 }

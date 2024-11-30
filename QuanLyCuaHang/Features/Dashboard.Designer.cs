@@ -79,9 +79,8 @@
             this.btn_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.Image")));
             this.btn_exit.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_exit.Location = new System.Drawing.Point(-1, -1);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(49, 47);
+            this.btn_exit.Size = new System.Drawing.Size(37, 38);
             this.btn_exit.TabIndex = 0;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
@@ -97,10 +96,9 @@
             this.btn_kho.FillColor = System.Drawing.Color.LightBlue;
             this.btn_kho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kho.ForeColor = System.Drawing.Color.Black;
-            this.btn_kho.Location = new System.Drawing.Point(453, 4);
-            this.btn_kho.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_kho.Location = new System.Drawing.Point(340, 3);
             this.btn_kho.Name = "btn_kho";
-            this.btn_kho.Size = new System.Drawing.Size(220, 43);
+            this.btn_kho.Size = new System.Drawing.Size(165, 35);
             this.btn_kho.TabIndex = 1;
             this.btn_kho.Text = "Kho";
             this.btn_kho.Click += new System.EventHandler(this.btn_kho_Click);
@@ -117,10 +115,9 @@
             this.btn_hoadon.FillColor = System.Drawing.Color.LightBlue;
             this.btn_hoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hoadon.ForeColor = System.Drawing.Color.Black;
-            this.btn_hoadon.Location = new System.Drawing.Point(227, 4);
-            this.btn_hoadon.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_hoadon.Location = new System.Drawing.Point(170, 3);
             this.btn_hoadon.Name = "btn_hoadon";
-            this.btn_hoadon.Size = new System.Drawing.Size(220, 43);
+            this.btn_hoadon.Size = new System.Drawing.Size(165, 35);
             this.btn_hoadon.TabIndex = 2;
             this.btn_hoadon.Text = "Hóa Đơn";
             this.btn_hoadon.Click += new System.EventHandler(this.btn_hoadon_Click);
@@ -140,10 +137,9 @@
             this.guna2Panel1.Controls.Add(this.button_khuyenmai);
             this.guna2Panel1.Controls.Add(this.btn_cuahang);
             this.guna2Panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1.Location = new System.Drawing.Point(19, 64);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(14, 52);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1800, 71);
+            this.guna2Panel1.Size = new System.Drawing.Size(1350, 58);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -159,12 +155,11 @@
             this.button_quanlynhanvien.FillColor = System.Drawing.Color.LightBlue;
             this.button_quanlynhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_quanlynhanvien.ForeColor = System.Drawing.Color.Black;
-            this.button_quanlynhanvien.Location = new System.Drawing.Point(1579, 4);
-            this.button_quanlynhanvien.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlynhanvien.Location = new System.Drawing.Point(1184, 3);
             this.button_quanlynhanvien.Name = "button_quanlynhanvien";
-            this.button_quanlynhanvien.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlynhanvien.Size = new System.Drawing.Size(165, 35);
             this.button_quanlynhanvien.TabIndex = 10;
-            this.button_quanlynhanvien.Text = "Quản lý nhân viên";
+            this.button_quanlynhanvien.Text = "Nhân viên";
             this.button_quanlynhanvien.Click += new System.EventHandler(this.button_quanlynhanvien_Click);
             // 
             // button_quanlykhachhang
@@ -179,12 +174,11 @@
             this.button_quanlykhachhang.FillColor = System.Drawing.Color.LightBlue;
             this.button_quanlykhachhang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_quanlykhachhang.ForeColor = System.Drawing.Color.Black;
-            this.button_quanlykhachhang.Location = new System.Drawing.Point(1355, 4);
-            this.button_quanlykhachhang.Margin = new System.Windows.Forms.Padding(4);
+            this.button_quanlykhachhang.Location = new System.Drawing.Point(1016, 3);
             this.button_quanlykhachhang.Name = "button_quanlykhachhang";
-            this.button_quanlykhachhang.Size = new System.Drawing.Size(220, 43);
+            this.button_quanlykhachhang.Size = new System.Drawing.Size(165, 35);
             this.button_quanlykhachhang.TabIndex = 9;
-            this.button_quanlykhachhang.Text = "Quản lý khách hàng";
+            this.button_quanlykhachhang.Text = "Khách hàng";
             this.button_quanlykhachhang.Click += new System.EventHandler(this.button_quanlykhachhang_Click);
             // 
             // panel_moving
@@ -192,10 +186,9 @@
             this.panel_moving.BackColor = System.Drawing.Color.Transparent;
             this.panel_moving.BorderRadius = 3;
             this.panel_moving.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel_moving.Location = new System.Drawing.Point(1, 50);
-            this.panel_moving.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_moving.Location = new System.Drawing.Point(1, 41);
             this.panel_moving.Name = "panel_moving";
-            this.panel_moving.Size = new System.Drawing.Size(220, 12);
+            this.panel_moving.Size = new System.Drawing.Size(165, 10);
             this.panel_moving.TabIndex = 6;
             this.panel_moving.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_moving_Paint);
             // 
@@ -211,10 +204,9 @@
             this.btn_lichsumua.FillColor = System.Drawing.Color.LightBlue;
             this.btn_lichsumua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lichsumua.ForeColor = System.Drawing.Color.Black;
-            this.btn_lichsumua.Location = new System.Drawing.Point(905, 4);
-            this.btn_lichsumua.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_lichsumua.Location = new System.Drawing.Point(679, 3);
             this.btn_lichsumua.Name = "btn_lichsumua";
-            this.btn_lichsumua.Size = new System.Drawing.Size(220, 43);
+            this.btn_lichsumua.Size = new System.Drawing.Size(165, 35);
             this.btn_lichsumua.TabIndex = 8;
             this.btn_lichsumua.Text = "Lịch sử hóa đơn";
             this.btn_lichsumua.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -231,10 +223,9 @@
             this.button_doanhthu.FillColor = System.Drawing.Color.LightBlue;
             this.button_doanhthu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_doanhthu.ForeColor = System.Drawing.Color.Black;
-            this.button_doanhthu.Location = new System.Drawing.Point(1130, 4);
-            this.button_doanhthu.Margin = new System.Windows.Forms.Padding(4);
+            this.button_doanhthu.Location = new System.Drawing.Point(848, 3);
             this.button_doanhthu.Name = "button_doanhthu";
-            this.button_doanhthu.Size = new System.Drawing.Size(220, 43);
+            this.button_doanhthu.Size = new System.Drawing.Size(165, 35);
             this.button_doanhthu.TabIndex = 7;
             this.button_doanhthu.Text = "Doanh Thu";
             this.button_doanhthu.Click += new System.EventHandler(this.button_doanhthu_Click);
@@ -251,10 +242,9 @@
             this.button_khuyenmai.FillColor = System.Drawing.Color.LightBlue;
             this.button_khuyenmai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_khuyenmai.ForeColor = System.Drawing.Color.Black;
-            this.button_khuyenmai.Location = new System.Drawing.Point(679, 4);
-            this.button_khuyenmai.Margin = new System.Windows.Forms.Padding(4);
+            this.button_khuyenmai.Location = new System.Drawing.Point(509, 3);
             this.button_khuyenmai.Name = "button_khuyenmai";
-            this.button_khuyenmai.Size = new System.Drawing.Size(220, 43);
+            this.button_khuyenmai.Size = new System.Drawing.Size(165, 35);
             this.button_khuyenmai.TabIndex = 6;
             this.button_khuyenmai.Text = "Khuyến mãi";
             this.button_khuyenmai.Click += new System.EventHandler(this.button_khuyenmai_Click);
@@ -271,10 +261,9 @@
             this.btn_cuahang.FillColor = System.Drawing.Color.LightBlue;
             this.btn_cuahang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cuahang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cuahang.Location = new System.Drawing.Point(1, 4);
-            this.btn_cuahang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cuahang.Location = new System.Drawing.Point(1, 3);
             this.btn_cuahang.Name = "btn_cuahang";
-            this.btn_cuahang.Size = new System.Drawing.Size(220, 43);
+            this.btn_cuahang.Size = new System.Drawing.Size(165, 35);
             this.btn_cuahang.TabIndex = 4;
             this.btn_cuahang.Text = "Cửa Hàng";
             this.btn_cuahang.Click += new System.EventHandler(this.btn_cuahang_Click);
@@ -291,10 +280,9 @@
             this.guna2Panel2.Controls.Add(this.uC_KhuyenMai1);
             this.guna2Panel2.Controls.Add(this.uC_KhoHang2);
             this.guna2Panel2.Controls.Add(this.uC_CuaHang3);
-            this.guna2Panel2.Location = new System.Drawing.Point(19, 139);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(14, 113);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1798, 798);
+            this.guna2Panel2.Size = new System.Drawing.Size(1348, 648);
             this.guna2Panel2.TabIndex = 3;
             // 
             // guna2Elipse1
@@ -311,10 +299,10 @@
             this.btn_dangxuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_dangxuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_dangxuat.ForeColor = System.Drawing.Color.Black;
-            this.btn_dangxuat.Location = new System.Drawing.Point(1637, 10);
-            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_dangxuat.Location = new System.Drawing.Point(1228, 8);
+            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_dangxuat.Name = "btn_dangxuat";
-            this.btn_dangxuat.Size = new System.Drawing.Size(180, 46);
+            this.btn_dangxuat.Size = new System.Drawing.Size(135, 37);
             this.btn_dangxuat.TabIndex = 4;
             this.btn_dangxuat.Text = "Đăng xuất";
             this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
@@ -359,14 +347,13 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(40, 30);
-            this.guna2TextBox1.Location = new System.Drawing.Point(1316, 12);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(987, 10);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.ReadOnly = true;
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(318, 44);
+            this.guna2TextBox1.Size = new System.Drawing.Size(238, 36);
             this.guna2TextBox1.TabIndex = 5;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -399,54 +386,58 @@
             // 
             // uC_QuanLyNhanVien1
             // 
-            this.uC_QuanLyNhanVien1.Location = new System.Drawing.Point(-1, 5);
+            this.uC_QuanLyNhanVien1.BackColor = System.Drawing.Color.AliceBlue;
+            this.uC_QuanLyNhanVien1.Location = new System.Drawing.Point(-1, 4);
+            this.uC_QuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_QuanLyNhanVien1.Name = "uC_QuanLyNhanVien1";
-            this.uC_QuanLyNhanVien1.Size = new System.Drawing.Size(1796, 800);
+            this.uC_QuanLyNhanVien1.Size = new System.Drawing.Size(1347, 650);
             this.uC_QuanLyNhanVien1.TabIndex = 9;
             // 
             // uC_QuanLyKhachHang1
             // 
+            this.uC_QuanLyKhachHang1.BackColor = System.Drawing.Color.AliceBlue;
             this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.uC_QuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
-            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1796, 800);
+            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1347, 650);
             this.uC_QuanLyKhachHang1.TabIndex = 8;
             // 
             // uC_HoaDon2
             // 
             this.uC_HoaDon2.BackColor = System.Drawing.Color.LightBlue;
-            this.uC_HoaDon2.Location = new System.Drawing.Point(0, -7);
-            this.uC_HoaDon2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_HoaDon2.Location = new System.Drawing.Point(0, -6);
+            this.uC_HoaDon2.Margin = new System.Windows.Forms.Padding(2);
             this.uC_HoaDon2.Name = "uC_HoaDon2";
-            this.uC_HoaDon2.Size = new System.Drawing.Size(1797, 807);
+            this.uC_HoaDon2.Size = new System.Drawing.Size(1348, 656);
             this.uC_HoaDon2.TabIndex = 7;
             this.uC_HoaDon2.Load += new System.EventHandler(this.uC_HoaDon2_Load);
             // 
             // uC_LichSuMua1
             // 
             this.uC_LichSuMua1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_LichSuMua1.Location = new System.Drawing.Point(-1, -7);
-            this.uC_LichSuMua1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_LichSuMua1.Location = new System.Drawing.Point(-1, -6);
+            this.uC_LichSuMua1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_LichSuMua1.Name = "uC_LichSuMua1";
-            this.uC_LichSuMua1.Size = new System.Drawing.Size(1812, 812);
+            this.uC_LichSuMua1.Size = new System.Drawing.Size(1359, 660);
             this.uC_LichSuMua1.TabIndex = 5;
             this.uC_LichSuMua1.Load += new System.EventHandler(this.uC_LichSuMua1_Load);
             // 
             // uC_DoanhThu1
             // 
             this.uC_DoanhThu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_DoanhThu1.Location = new System.Drawing.Point(-1, -7);
-            this.uC_DoanhThu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_DoanhThu1.Location = new System.Drawing.Point(-1, -6);
+            this.uC_DoanhThu1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_DoanhThu1.Name = "uC_DoanhThu1";
-            this.uC_DoanhThu1.Size = new System.Drawing.Size(1799, 812);
+            this.uC_DoanhThu1.Size = new System.Drawing.Size(1349, 660);
             this.uC_DoanhThu1.TabIndex = 4;
             // 
             // uC_KhuyenMai1
             // 
             this.uC_KhuyenMai1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_KhuyenMai1.Location = new System.Drawing.Point(-3, 0);
-            this.uC_KhuyenMai1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_KhuyenMai1.Location = new System.Drawing.Point(-2, 0);
+            this.uC_KhuyenMai1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_KhuyenMai1.Name = "uC_KhuyenMai1";
-            this.uC_KhuyenMai1.Size = new System.Drawing.Size(1797, 805);
+            this.uC_KhuyenMai1.Size = new System.Drawing.Size(1348, 654);
             this.uC_KhuyenMai1.TabIndex = 3;
             this.uC_KhuyenMai1.Load += new System.EventHandler(this.uC_KhuyenMai1_Load);
             // 
@@ -454,34 +445,33 @@
             // 
             this.uC_KhoHang2.BackColor = System.Drawing.Color.AliceBlue;
             this.uC_KhoHang2.Location = new System.Drawing.Point(0, 2);
-            this.uC_KhoHang2.Margin = new System.Windows.Forms.Padding(5);
+            this.uC_KhoHang2.Margin = new System.Windows.Forms.Padding(4);
             this.uC_KhoHang2.Name = "uC_KhoHang2";
-            this.uC_KhoHang2.Size = new System.Drawing.Size(1797, 807);
+            this.uC_KhoHang2.Size = new System.Drawing.Size(1348, 656);
             this.uC_KhoHang2.TabIndex = 2;
             // 
             // uC_CuaHang3
             // 
             this.uC_CuaHang3.BackColor = System.Drawing.Color.AliceBlue;
-            this.uC_CuaHang3.Location = new System.Drawing.Point(3, 2);
-            this.uC_CuaHang3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CuaHang3.Location = new System.Drawing.Point(2, 2);
+            this.uC_CuaHang3.Margin = new System.Windows.Forms.Padding(2);
             this.uC_CuaHang3.Name = "uC_CuaHang3";
-            this.uC_CuaHang3.Size = new System.Drawing.Size(1797, 796);
+            this.uC_CuaHang3.Size = new System.Drawing.Size(1348, 647);
             this.uC_CuaHang3.TabIndex = 0;
             this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1860, 974);
+            this.ClientSize = new System.Drawing.Size(1395, 791);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.btn_dangxuat);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btn_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
