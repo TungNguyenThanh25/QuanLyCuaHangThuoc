@@ -24,13 +24,14 @@ namespace QuanLyCuaHang
         {
             var ucTimHoaDon = new UC_TimHoaDon();
             ucTimHoaDon.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
+            ucTimHoaDon.OnRefreshData += UcTimHoaDon_OnRefreshData;
         }
 
         public void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
         }
-        public void clearData()
+        public void loadData()
         {
             getData();
         }
@@ -41,10 +42,15 @@ namespace QuanLyCuaHang
             guna2DataGridView1.DataSource = newData;
 
             // Kiểm tra dữ liệu trống
-            if (newData == null || newData.Rows.Count == 0)
+            if (newData.Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy hóa đơn phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void UcTimHoaDon_OnRefreshData(object sender, DataTable newData)
+        {
+            loadData();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -102,6 +108,7 @@ namespace QuanLyCuaHang
 
             // Đăng ký sự kiện OnDataUpdated
             uC_TimHoaDon2.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
+            uC_TimHoaDon2.OnRefreshData += UcTimHoaDon_OnRefreshData;
 
             //uC_TimHoaDon1.Visible=false;
             //uC_XoaHoaDon1.Visible = false;

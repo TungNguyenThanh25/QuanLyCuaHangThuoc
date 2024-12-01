@@ -53,8 +53,8 @@ namespace QuanLyCuaHang
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu sai", "Sai thông tin đăng nhập");
-                    //MessageBox.Show(ex.Message);
+                    //MessageBox.Show("Tài khoản hoặc mật khẩu sai", "Sai thông tin đăng nhập");
+                    MessageBox.Show(ex.Message);
                 }
             }
             else

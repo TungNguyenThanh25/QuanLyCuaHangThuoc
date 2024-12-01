@@ -83,7 +83,7 @@ namespace QuanLyCuaHang
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
         }
-        public void clearData()
+        public void loadUcCuaHang()
         {
             txt_tensanphamcantim.Clear();
             text_masanphamcanthem.Clear();

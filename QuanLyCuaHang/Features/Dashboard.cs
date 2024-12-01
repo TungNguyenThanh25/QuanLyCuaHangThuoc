@@ -112,7 +112,7 @@ namespace QuanLyCuaHang
             uC_QuanLyKhachHang1.Visible = false;
             uC_QuanLyNhanVien1.Visible = false;
 
-            uC_CuaHang3.clearData();
+            uC_CuaHang3.loadUcCuaHang();
 
             panel_moving.Left = btn_cuahang.Left + 0;
             uC_CuaHang3.Visible = true;

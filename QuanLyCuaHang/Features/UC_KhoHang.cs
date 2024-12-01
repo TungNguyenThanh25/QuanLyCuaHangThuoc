@@ -18,11 +18,14 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
-
-
         private void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        public void loadUcKhoHang()
+        {
+            getData();
         }
 
         private void UC_KhoHang_Load(object sender, EventArgs e)

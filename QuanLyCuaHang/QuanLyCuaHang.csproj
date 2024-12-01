@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\EventHandler.cs" />
     <Compile Include="Features\UC_DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>

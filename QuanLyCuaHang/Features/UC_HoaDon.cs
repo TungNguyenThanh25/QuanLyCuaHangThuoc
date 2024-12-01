@@ -25,7 +25,7 @@ namespace QuanLyCuaHang
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
         }
-        public void clearData()
+        public void loadUcHoaDon()
         {
             txt_SoDienThoai_HD.Clear();
             txt_TenKhachHang.Clear();
@@ -67,7 +67,7 @@ namespace QuanLyCuaHang
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            clearData();
+            loadUcHoaDon();
         }
 
         private void txt_thanhtoan_TextChanged(object sender, EventArgs e)

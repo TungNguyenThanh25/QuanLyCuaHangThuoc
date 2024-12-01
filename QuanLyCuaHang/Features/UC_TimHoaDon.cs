@@ -19,6 +19,7 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
+
         //Lấy dữ liệu từng bảng
         private DataTable GetHoaDon()
         {
