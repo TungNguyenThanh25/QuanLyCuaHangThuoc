@@ -26,7 +26,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Tim_HoaDon_LichSuHoaDon N'{text_tenkhachhangtimhoadon.Text}', '{text_ngaymuahangtimhoadon.Text}'";
+                dbExec.Query = $"EXEC SP_Loc_HoaDon_LichSuHoaDon N'{text_tenkhachhangtimhoadon.Text}', '{text_ngaymuahangtimhoadon.Text}'";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }

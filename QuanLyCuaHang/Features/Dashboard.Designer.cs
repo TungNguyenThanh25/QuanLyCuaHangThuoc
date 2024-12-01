@@ -42,14 +42,6 @@
             this.button_khuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.btn_cuahang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_QuanLyNhanVien1 = new QuanLyCuaHang.Features.UC_QuanLyNhanVien();
-            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
-            this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
-            this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
-            this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
-            this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
-            this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
-            this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_dangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.timer_logout = new System.Windows.Forms.Timer(this.components);
@@ -63,6 +55,14 @@
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_QuanLyNhanVien1 = new QuanLyCuaHang.Features.UC_QuanLyNhanVien();
+            this.uC_QuanLyKhachHang1 = new QuanLyCuaHang.Features.UC_QuanLyKhachHang();
+            this.uC_HoaDon2 = new QuanLyCuaHang.UC_HoaDon();
+            this.uC_LichSuMua1 = new QuanLyCuaHang.UC_LichSuMua();
+            this.uC_DoanhThu1 = new QuanLyCuaHang.UC_DoanhThu();
+            this.uC_KhuyenMai1 = new QuanLyCuaHang.UC_KhuyenMai();
+            this.uC_KhoHang2 = new QuanLyCuaHang.UC_KhoHang();
+            this.uC_CuaHang3 = new QuanLyCuaHang.UC_CuaHang();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -285,82 +285,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1348, 648);
             this.guna2Panel2.TabIndex = 3;
             // 
-            // uC_QuanLyNhanVien1
-            // 
-            this.uC_QuanLyNhanVien1.BackColor = System.Drawing.Color.AliceBlue;
-            this.uC_QuanLyNhanVien1.Location = new System.Drawing.Point(-1, 4);
-            this.uC_QuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_QuanLyNhanVien1.Name = "uC_QuanLyNhanVien1";
-            this.uC_QuanLyNhanVien1.Size = new System.Drawing.Size(1347, 650);
-            this.uC_QuanLyNhanVien1.TabIndex = 9;
-            // 
-            // uC_QuanLyKhachHang1
-            // 
-            this.uC_QuanLyKhachHang1.BackColor = System.Drawing.Color.AliceBlue;
-            this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(0, 0);
-            this.uC_QuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
-            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1347, 650);
-            this.uC_QuanLyKhachHang1.TabIndex = 8;
-            // 
-            // uC_HoaDon2
-            // 
-            this.uC_HoaDon2.BackColor = System.Drawing.Color.LightBlue;
-            this.uC_HoaDon2.Location = new System.Drawing.Point(0, -6);
-            this.uC_HoaDon2.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_HoaDon2.Name = "uC_HoaDon2";
-            this.uC_HoaDon2.Size = new System.Drawing.Size(1348, 656);
-            this.uC_HoaDon2.TabIndex = 7;
-            this.uC_HoaDon2.Load += new System.EventHandler(this.uC_HoaDon2_Load);
-            // 
-            // uC_LichSuMua1
-            // 
-            this.uC_LichSuMua1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_LichSuMua1.Location = new System.Drawing.Point(-1, -6);
-            this.uC_LichSuMua1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_LichSuMua1.Name = "uC_LichSuMua1";
-            this.uC_LichSuMua1.Size = new System.Drawing.Size(1359, 660);
-            this.uC_LichSuMua1.TabIndex = 5;
-            this.uC_LichSuMua1.Load += new System.EventHandler(this.uC_LichSuMua1_Load);
-            // 
-            // uC_DoanhThu1
-            // 
-            this.uC_DoanhThu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_DoanhThu1.Location = new System.Drawing.Point(-1, -6);
-            this.uC_DoanhThu1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_DoanhThu1.Name = "uC_DoanhThu1";
-            this.uC_DoanhThu1.Size = new System.Drawing.Size(1349, 660);
-            this.uC_DoanhThu1.TabIndex = 4;
-            // 
-            // uC_KhuyenMai1
-            // 
-            this.uC_KhuyenMai1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_KhuyenMai1.Location = new System.Drawing.Point(-2, 0);
-            this.uC_KhuyenMai1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_KhuyenMai1.Name = "uC_KhuyenMai1";
-            this.uC_KhuyenMai1.Size = new System.Drawing.Size(1348, 654);
-            this.uC_KhuyenMai1.TabIndex = 3;
-            this.uC_KhuyenMai1.Load += new System.EventHandler(this.uC_KhuyenMai1_Load);
-            // 
-            // uC_KhoHang2
-            // 
-            this.uC_KhoHang2.BackColor = System.Drawing.Color.AliceBlue;
-            this.uC_KhoHang2.Location = new System.Drawing.Point(0, 2);
-            this.uC_KhoHang2.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_KhoHang2.Name = "uC_KhoHang2";
-            this.uC_KhoHang2.Size = new System.Drawing.Size(1348, 656);
-            this.uC_KhoHang2.TabIndex = 2;
-            // 
-            // uC_CuaHang3
-            // 
-            this.uC_CuaHang3.BackColor = System.Drawing.Color.AliceBlue;
-            this.uC_CuaHang3.Location = new System.Drawing.Point(2, 2);
-            this.uC_CuaHang3.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_CuaHang3.Name = "uC_CuaHang3";
-            this.uC_CuaHang3.Size = new System.Drawing.Size(1348, 647);
-            this.uC_CuaHang3.TabIndex = 0;
-            this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -460,6 +384,82 @@
             // guna2Elipse9
             // 
             this.guna2Elipse9.TargetControl = this;
+            // 
+            // uC_QuanLyNhanVien1
+            // 
+            this.uC_QuanLyNhanVien1.BackColor = System.Drawing.Color.AliceBlue;
+            this.uC_QuanLyNhanVien1.Location = new System.Drawing.Point(-1, 4);
+            this.uC_QuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_QuanLyNhanVien1.Name = "uC_QuanLyNhanVien1";
+            this.uC_QuanLyNhanVien1.Size = new System.Drawing.Size(1347, 650);
+            this.uC_QuanLyNhanVien1.TabIndex = 9;
+            // 
+            // uC_QuanLyKhachHang1
+            // 
+            this.uC_QuanLyKhachHang1.BackColor = System.Drawing.Color.AliceBlue;
+            this.uC_QuanLyKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.uC_QuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_QuanLyKhachHang1.Name = "uC_QuanLyKhachHang1";
+            this.uC_QuanLyKhachHang1.Size = new System.Drawing.Size(1347, 650);
+            this.uC_QuanLyKhachHang1.TabIndex = 8;
+            // 
+            // uC_HoaDon2
+            // 
+            this.uC_HoaDon2.BackColor = System.Drawing.Color.LightBlue;
+            this.uC_HoaDon2.Location = new System.Drawing.Point(0, -6);
+            this.uC_HoaDon2.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_HoaDon2.Name = "uC_HoaDon2";
+            this.uC_HoaDon2.Size = new System.Drawing.Size(1348, 656);
+            this.uC_HoaDon2.TabIndex = 7;
+            this.uC_HoaDon2.Load += new System.EventHandler(this.uC_HoaDon2_Load);
+            // 
+            // uC_LichSuMua1
+            // 
+            this.uC_LichSuMua1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_LichSuMua1.Location = new System.Drawing.Point(-1, -6);
+            this.uC_LichSuMua1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_LichSuMua1.Name = "uC_LichSuMua1";
+            this.uC_LichSuMua1.Size = new System.Drawing.Size(1359, 660);
+            this.uC_LichSuMua1.TabIndex = 5;
+            this.uC_LichSuMua1.Load += new System.EventHandler(this.uC_LichSuMua1_Load);
+            // 
+            // uC_DoanhThu1
+            // 
+            this.uC_DoanhThu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_DoanhThu1.Location = new System.Drawing.Point(-1, -6);
+            this.uC_DoanhThu1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_DoanhThu1.Name = "uC_DoanhThu1";
+            this.uC_DoanhThu1.Size = new System.Drawing.Size(1349, 660);
+            this.uC_DoanhThu1.TabIndex = 4;
+            // 
+            // uC_KhuyenMai1
+            // 
+            this.uC_KhuyenMai1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_KhuyenMai1.Location = new System.Drawing.Point(-2, 0);
+            this.uC_KhuyenMai1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_KhuyenMai1.Name = "uC_KhuyenMai1";
+            this.uC_KhuyenMai1.Size = new System.Drawing.Size(1348, 654);
+            this.uC_KhuyenMai1.TabIndex = 3;
+            this.uC_KhuyenMai1.Load += new System.EventHandler(this.uC_KhuyenMai1_Load);
+            // 
+            // uC_KhoHang2
+            // 
+            this.uC_KhoHang2.BackColor = System.Drawing.Color.AliceBlue;
+            this.uC_KhoHang2.Location = new System.Drawing.Point(0, 2);
+            this.uC_KhoHang2.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_KhoHang2.Name = "uC_KhoHang2";
+            this.uC_KhoHang2.Size = new System.Drawing.Size(1348, 656);
+            this.uC_KhoHang2.TabIndex = 2;
+            // 
+            // uC_CuaHang3
+            // 
+            this.uC_CuaHang3.BackColor = System.Drawing.Color.AliceBlue;
+            this.uC_CuaHang3.Location = new System.Drawing.Point(2, 2);
+            this.uC_CuaHang3.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_CuaHang3.Name = "uC_CuaHang3";
+            this.uC_CuaHang3.Size = new System.Drawing.Size(1348, 647);
+            this.uC_CuaHang3.TabIndex = 0;
+            this.uC_CuaHang3.Load += new System.EventHandler(this.uC_CuaHang3_Load);
             // 
             // Dashboard
             // 

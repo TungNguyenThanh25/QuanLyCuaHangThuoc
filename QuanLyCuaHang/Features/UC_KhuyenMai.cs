@@ -31,7 +31,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Xuat_KMT";
+                dbExec.Query = $"EXEC SP_Select_V_Show_KMT";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }
@@ -46,7 +46,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Xuat_KMHD";
+                dbExec.Query = $"EXEC SP_Select_V_Show_KMHD";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }

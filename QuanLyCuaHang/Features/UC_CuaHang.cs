@@ -1,4 +1,5 @@
 ﻿using QuanLyCuaHang.Database;
+using QuanLyCuaHang.LoginRegister;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,29 @@ namespace QuanLyCuaHang
         public UC_CuaHang()
         {
             InitializeComponent();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Insert_GioHang '{User.username}'";
+                dbExec.executeQueryCommand();
+            }
+            catch (Exception ex) { }
+        }
+
+        private void AddCart()
+        {
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Insert_ChiTietGioHang '{User.username}', '{text_masanphamcanthem.Text.Trim()}', {text_soluongsanphamcanthem.Text.Trim()}";
+                dbExec.executeQueryCommand();
+
+                MessageBox.Show("Thêm vào giỏ hàng thành công!");
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
         //Lấy dữ liệu từng bảng
@@ -28,7 +52,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Xuat_CuaHang";
+                dbExec.Query = $"EXEC SP_Select_V_Show_CuaHang";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex)
@@ -39,13 +63,13 @@ namespace QuanLyCuaHang
         }
 
         // Lấy dữ liệu cho tìm sản phẩm
-        private DataTable GetDataFromTimSanPham()
+        private DataTable GetDataFromLocSanPham()
         {
             DataTable dataTable = new DataTable();
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Tim_SanPham_CuaHang N'{txt_tensanphamcantim.Text.Trim()}'";
+                dbExec.Query = $"EXEC SP_Loc_SanPham_CuaHang N'{txt_tensanphamcantim.Text.Trim()}'";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex)
@@ -55,9 +79,14 @@ namespace QuanLyCuaHang
             return dataTable;
         }
 
-        private void UC_CuaHang_Load(object sender, EventArgs e)
+        private void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        private void UC_CuaHang_Load(object sender, EventArgs e)
+        {
+            getData();
         }
 
         private void btn_xoakhoikho_Click(object sender, EventArgs e)
@@ -70,14 +99,20 @@ namespace QuanLyCuaHang
 
         private void bnt_timsanpham_Click(object sender, EventArgs e)
         {
-            guna2DataGridView1.DataSource = GetDataFromTimSanPham();
+            DataTable dataTable = GetDataFromLocSanPham();
+            if (dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy tên sản phẩm cần tìm");
+                return;
+            }
+            guna2DataGridView1.DataSource = dataTable;
         }
 
         private void btn_theogiohang_Click(object sender, EventArgs e)
         {
-            //text_tensanphamcanthem
-            //text_masanphamcanthem
-            //text_soluongsanphamcanthem;
+            AddCart();
+            text_masanphamcanthem.Clear();
+            text_soluongsanphamcanthem.Clear();
         }
     }
 }

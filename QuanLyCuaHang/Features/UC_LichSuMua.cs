@@ -72,7 +72,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Xuat_LichSuHoaDon";
+                dbExec.Query = $"EXEC SP_Select_V_Show_LichSuHoaDon";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }

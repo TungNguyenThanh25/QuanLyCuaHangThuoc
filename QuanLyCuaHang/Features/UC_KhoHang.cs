@@ -16,6 +16,10 @@ namespace QuanLyCuaHang
         public UC_KhoHang()
         {
             InitializeComponent();
+        }
+
+        private void getData()
+        {
             guna2DataGridView1.DataSource = GetDataFromTable();
         }
 
@@ -33,7 +37,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                dbExec.Query = $"EXEC SP_Xuat_Kho";
+                dbExec.Query = $"EXEC SP_Select_V_Show_Kho";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }
@@ -88,6 +92,7 @@ namespace QuanLyCuaHang
             panel_movingkhohang.Left = btn_xoasanphamkhohang.Left;
             uC_XoaSanPham1.Visible = true;
             uC_XoaSanPham1.BringToFront();
+            getData();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -98,6 +103,7 @@ namespace QuanLyCuaHang
             panel_movingkhohang.Left = btn_suasanphamkhohang.Left;
             uC_SuaSanPham1.Visible=true;
             uC_SuaSanPham1.BringToFront();
+            getData();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -118,6 +124,7 @@ namespace QuanLyCuaHang
             panel_movingkhohang.Left = btn_themsanphamkhohang.Left;
             uC_ThemSanPham1.Visible = true;
             uC_ThemSanPham1.BringToFront();
+            getData();
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)

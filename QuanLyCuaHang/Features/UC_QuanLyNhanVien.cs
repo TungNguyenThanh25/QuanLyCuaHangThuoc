@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using QuanLyCuaHang.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +17,27 @@ namespace QuanLyCuaHang.Features
         public UC_QuanLyNhanVien()
         {
             InitializeComponent();
+            getData();
         }
 
+        private void getData()
+        {
+            guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        //Lấy dữ liệu từng bảng
+        private DataTable GetDataFromTable()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Select_V_Show_QuanLyNhanVien";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
+            return dataTable;
+        }
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -34,7 +55,7 @@ namespace QuanLyCuaHang.Features
 
         private void uC_TimNhanVien1_Load(object sender, EventArgs e)
         {
-
+            getData();
         }
 
         private void btn_themnhanvien_Click(object sender, EventArgs e)
@@ -83,6 +104,11 @@ namespace QuanLyCuaHang.Features
         }
 
         private void panel_movingquanlynhanvien_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

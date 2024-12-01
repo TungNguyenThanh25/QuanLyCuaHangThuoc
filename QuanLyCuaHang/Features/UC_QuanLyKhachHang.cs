@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyCuaHang.Database;
+using QuanLyCuaHang.LoginRegister;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,26 @@ namespace QuanLyCuaHang.Features
         public UC_QuanLyKhachHang()
         {
             InitializeComponent();
+            getData();
+        }
+
+        private void getData()
+        {
+            guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+
+        //Lấy dữ liệu từng bảng
+        private DataTable GetDataFromTable()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = $"EXEC SP_Select_V_Show_QuanLyKhachHang";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex) { }
+            return dataTable;
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,6 +79,7 @@ namespace QuanLyCuaHang.Features
             uC_ThayDoiThongTinKhachHang1.Visible = false;
             uC_XoaKhachHang1.Visible = false;
             btn_themkhachhang.PerformClick();
+            getData();
         }
     }
 }

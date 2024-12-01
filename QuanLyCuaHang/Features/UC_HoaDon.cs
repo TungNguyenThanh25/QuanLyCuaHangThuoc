@@ -1,4 +1,5 @@
 ﻿using QuanLyCuaHang.Database;
+using QuanLyCuaHang.LoginRegister;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace QuanLyCuaHang
             try
             {
                 DatabaseExecute dbExec = new DatabaseExecute();
-                //dbExec.Query = $"EXEC SP_Xuat_CuaHang";
+                dbExec.Query = $"EXEC SP_Select_V_Show_GioHang_Detail '{User.username}'";
                 dbExec.executeQueryDataAdapter().Fill(dataTable);
             }
             catch (Exception ex) { }
@@ -57,7 +58,7 @@ namespace QuanLyCuaHang
             txt_thanhtien.Clear();
             txt_tongtien.Clear();
             txt_tongsoluongmathang.Clear();
-            
+            UC_HoaDon_Load(sender, e);
         }
 
         private void txt_thanhtoan_TextChanged(object sender, EventArgs e)
