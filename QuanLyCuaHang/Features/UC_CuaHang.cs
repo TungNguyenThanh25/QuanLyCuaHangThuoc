@@ -79,14 +79,20 @@ namespace QuanLyCuaHang
             return dataTable;
         }
 
-        private void getData()
+        public void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+        public void clearData()
+        {
+            txt_tensanphamcantim.Clear();
+            text_masanphamcanthem.Clear();
+            text_soluongsanphamcanthem.Clear();
+            getData();
         }
 
         private void UC_CuaHang_Load(object sender, EventArgs e)
         {
-            getData();
         }
 
         private void btn_xoakhoikho_Click(object sender, EventArgs e)

@@ -17,20 +17,22 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
             InitializeUC_TimHoaDon(); // Gọi hàm khởi tạo
-            guna2DataGridView1.DataSource = GetDataFromTable();
+            getData();
         }
 
         private void InitializeUC_TimHoaDon()
         {
             var ucTimHoaDon = new UC_TimHoaDon();
             ucTimHoaDon.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
-            ucTimHoaDon.OnRefreshData += UcTimHoaDon_OnRefeshData;
         }
 
-        private void UcTimHoaDon_OnRefeshData(object sender, DataTable newData)
+        public void getData()
         {
-            // Cập nhật DataGridView với dữ liệu mới
             guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+        public void clearData()
+        {
+            getData();
         }
 
         private void UcTimHoaDon_OnDataUpdated(object sender, DataTable newData)
@@ -100,8 +102,6 @@ namespace QuanLyCuaHang
 
             // Đăng ký sự kiện OnDataUpdated
             uC_TimHoaDon2.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
-            // Đăng ký sự kiện OnRefreshData
-            uC_TimHoaDon2.OnRefreshData += UcTimHoaDon_OnRefeshData;
 
             //uC_TimHoaDon1.Visible=false;
             //uC_XoaHoaDon1.Visible = false;

@@ -112,10 +112,13 @@ namespace QuanLyCuaHang
             uC_QuanLyKhachHang1.Visible = false;
             uC_QuanLyNhanVien1.Visible = false;
 
+            uC_CuaHang3.clearData();
+
             panel_moving.Left = btn_cuahang.Left + 0;
             uC_CuaHang3.Visible = true;
             uC_CuaHang3.BringToFront();
         }
+
         private void button_khuyenmai_Click(object sender, EventArgs e)
         {
             uC_CuaHang3.Visible = false;

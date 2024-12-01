@@ -18,6 +18,8 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
+
+
         private void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();

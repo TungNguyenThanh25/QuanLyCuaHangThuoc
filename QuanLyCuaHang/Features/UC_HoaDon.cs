@@ -21,6 +21,21 @@ namespace QuanLyCuaHang
             
         }
 
+        public void getData()
+        {
+            guna2DataGridView1.DataSource = GetDataFromTable();
+        }
+        public void clearData()
+        {
+            txt_SoDienThoai_HD.Clear();
+            txt_TenKhachHang.Clear();
+            txt_MaKhuyenMai.Clear();
+            txt_thanhtien.Clear();
+            txt_tongtien.Clear();
+            txt_tongsoluongmathang.Clear();
+            getData();
+        }
+
         //Lấy dữ liệu từng bảng
         private DataTable GetDataFromTable()
         {
@@ -52,13 +67,7 @@ namespace QuanLyCuaHang
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            txt_SoDienThoai_HD.Clear();
-            txt_TenKhachHang.Clear();
-            txt_MaKhuyenMai.Clear();
-            txt_thanhtien.Clear();
-            txt_tongtien.Clear();
-            txt_tongsoluongmathang.Clear();
-            UC_HoaDon_Load(sender, e);
+            clearData();
         }
 
         private void txt_thanhtoan_TextChanged(object sender, EventArgs e)
