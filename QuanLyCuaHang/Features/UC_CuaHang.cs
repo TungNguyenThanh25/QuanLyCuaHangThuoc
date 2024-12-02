@@ -27,6 +27,7 @@ namespace QuanLyCuaHang
                 dbExec.executeQueryCommand();
             }
             catch (Exception ex) { }
+            UC_CuaHang_Load(this, new EventArgs());
         }
 
         private void AddCart()
@@ -93,6 +94,7 @@ namespace QuanLyCuaHang
 
         private void UC_CuaHang_Load(object sender, EventArgs e)
         {
+            clearData();
         }
 
         private void btn_xoakhoikho_Click(object sender, EventArgs e)

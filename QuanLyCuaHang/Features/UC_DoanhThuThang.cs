@@ -27,6 +27,8 @@ namespace QuanLyCuaHang
             LoadChartDataThang(DateTime.Now.Month, DateTime.Now.Year);
             guna2TextBox4.Text = GetSoLuongHoaDon(DateTime.Now.Month, DateTime.Now.Year).ToString();
             guna2TextBox3.Text = GetTongDoanhThu(DateTime.Now.Month, DateTime.Now.Year).ToString();
+            guna2ComboBox1.SelectedItem = DateTime.Now.Month.ToString();
+            guna2ComboBox2.SelectedItem = DateTime.Now.Year.ToString();
         }
 
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
