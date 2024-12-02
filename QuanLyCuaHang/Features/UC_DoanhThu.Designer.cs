@@ -1,4 +1,7 @@
-﻿namespace QuanLyCuaHang
+﻿using System.Drawing;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace QuanLyCuaHang
 {
     partial class UC_DoanhThu
     {
@@ -163,19 +166,56 @@
             // 
             // chart1
             // 
+            // Chart Areas
             chartArea1.Name = "ChartArea1";
+            chartArea1.BackColor = Color.White; // Nền trắng
+            chartArea1.AxisX.Title = "Thời gian (Ngày/Tháng)";
+            chartArea1.AxisX.TitleFont = new Font("Arial", 12, FontStyle.Bold);
+            chartArea1.AxisX.LabelStyle.Font = new Font("Arial", 10); // Font cho nhãn trục X
+            chartArea1.AxisX.MajorGrid.LineColor = Color.LightGray; // Lưới trục X màu xám nhạt
+            chartArea1.AxisY.Title = "Doanh thu (VND)";
+            chartArea1.AxisY.TitleFont = new Font("Arial", 12, FontStyle.Bold);
+            chartArea1.AxisY.LabelStyle.Font = new Font("Arial", 10); // Font cho nhãn trục Y
+            chartArea1.AxisY.MajorGrid.LineColor = Color.LightGray; // Lưới trục Y màu xám nhạt
+
+            this.chart1.ChartAreas.Clear();
             this.chart1.ChartAreas.Add(chartArea1);
+
+            // Legends
             legend1.Name = "Legend1";
+            legend1.Docking = Docking.Top; // Đặt chú thích ở phía trên
+            legend1.Alignment = StringAlignment.Center; // Canh giữa
+            legend1.Font = new Font("Arial", 10); // Font chú thích
+            legend1.IsTextAutoFit = true;
+
+            this.chart1.Legends.Clear();
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 6);
-            this.chart1.Name = "chart1";
+
+            // Series
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.ChartType = SeriesChartType.Column; // Loại biểu đồ: Cột
+            series1.Color = Color.SteelBlue; // Màu cột
+            series1.BorderWidth = 2; // Độ dày viền
+            series1.IsValueShownAsLabel = true; // Hiển thị giá trị trên cột
+            series1.Font = new Font("Arial", 9, FontStyle.Bold); // Font giá trị
+            series1.LabelForeColor = Color.DarkBlue; // Màu chữ giá trị
+
+            this.chart1.Series.Clear();
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(773, 430);
+
+            // Chart Properties
+            this.chart1.BackColor = Color.WhiteSmoke; // Nền chart
+            this.chart1.BorderlineDashStyle = ChartDashStyle.Solid;
+            this.chart1.BorderlineColor = Color.Silver;
+            this.chart1.BorderlineWidth = 2;
+
+            // Kích thước Chart
+            this.chart1.Location = new System.Drawing.Point(10, 10);
+            this.chart1.Size = new System.Drawing.Size(750, 425);
             this.chart1.TabIndex = 2;
-            this.chart1.Text = "chart1";
+            this.chart1.Text = "Biểu đồ Doanh Thu";
+
             // 
             // uC_DoanhThuNam1
             // 

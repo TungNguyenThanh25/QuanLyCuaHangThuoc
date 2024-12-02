@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyCuaHang.Database;
+using System;
+using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -9,50 +11,107 @@ namespace QuanLyCuaHang
         public UC_DoanhThu()
         {
             InitializeComponent();
-            LoadChartData(); // Gọi hàm để tải dữ liệu khi khởi tạo
+            InitializeUC_XemDoanhThuThang();
+            UC_XemDoanhThu_Load(this, new EventArgs());
         }
+
+        private void UC_XemDoanhThu_Load(object sender, EventArgs e)
+        {
+            // Ẩn các control không cần thiết
+            uC_DoanhThuThang1.Visible = false;
+            uC_DoanhThuNam1.Visible = false;
+
+            // Kích hoạt hành động nhấn nút
+            btn_doanhthuthang.PerformClick();
+        }
+
+        private void InitializeUC_XemDoanhThuThang()
+        {
+            var ucXemDoanhThuThang = new UC_DoanhThuThang();
+            ucXemDoanhThuThang.OnLoadChartDataThang += UcDoanhThuThang_OnLoadChartDataThang;
+        }
+
+        private void UcDoanhThuThang_OnLoadChartDataThang(object sender, Tuple<int, int> e)
+        {
+            int thang = e.Item1;
+            int nam = e.Item2;
+            LoadChartDataThang(thang, nam);
+        }
+
 
         private void chart1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bạn vừa nhấp vào biểu đồ!");
         }
 
-        private void LoadChartData()
+        private DataTable GetDataFromTable(int thang, int nam)
         {
-            //// Xóa dữ liệu cũ (nếu có)
-            //chart1.Series.Clear();
-            //chart1.ChartAreas.Clear();
-
-            //// Thêm ChartArea
-            //ChartArea chartArea = new ChartArea("DoanhThuArea");
-            //chart1.ChartAreas.Add(chartArea);
-
-            //// Tạo Series và thêm dữ liệu
-            //Series series = new Series("Doanh thu")
-            //{
-            //    ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
-            //    IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
-            //};
-
-            //// Thêm dữ liệu mẫu
-            //series.Points.AddXY("Tháng 1", 1000);
-            //series.Points.AddXY("Tháng 2", 1200);
-            //series.Points.AddXY("Tháng 3", 900);
-            //series.Points.AddXY("Tháng 4", 1500);
-            //series.Points.AddXY("Tháng 5", 1300);
-
-            //// Thêm Series vào biểu đồ
-            //chart1.Series.Add(series);
-
-            //// Tùy chỉnh trục
-            //chartArea.AxisX.Title = "Tháng";
-            //chartArea.AxisY.Title = "Doanh thu (VNĐ)";
-            //chartArea.AxisX.Interval = 1; // Hiển thị từng nhãn trục X
-            uC_DoanhThuThang1.Visible = false;
-            uC_DoanhThuNam1.Visible = false;
-            
-            btn_doanhthuthang.PerformClick();
+            DataTable dataTable = new DataTable();
+            try
+            {
+                DatabaseExecute dbExec = new DatabaseExecute();
+                dbExec.Query = "SELECT * FROM dbo.FUNC_Select_V_Show_DoanhThu_Thang(" + thang + ", " + nam + ");";
+                dbExec.executeQueryDataAdapter().Fill(dataTable);
+            }
+            catch (Exception ex)
+            {
+                //// Ghi log hoặc hiển thị thông báo lỗi
+                //Console.WriteLine($"Error: {ex.Message}");
+            }
+            return dataTable;
         }
+
+        private void LoadChartDataThang(int thang, int nam)
+        {
+            DataTable dtTable = GetDataFromTable(thang, nam);
+
+            //iểm tra dữ liệu có tồn tại
+            if (dtTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu để hiển thị biểu đồ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
+            chart1.ChartAreas.Clear();
+
+            // Thêm ChartArea
+            ChartArea chartArea = new ChartArea("DoanhThuArea");
+            chart1.ChartAreas.Add(chartArea);
+
+            // Tạo Series và thêm dữ liệu
+            Series series = new Series("Doanh thu tháng " + thang + " " + nam)
+            {
+                ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
+                IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
+            };
+
+            foreach (DataRow row in dtTable.Rows)
+            {
+                try
+                {
+                    // Lấy giá trị từ cột
+                    string day = row["Ngày"].ToString(); // Thay "MonthColumn" bằng tên cột chứa tháng
+                    double revenue = Convert.ToDouble(row["Doanh thu"]); // Thay "RevenueColumn" bằng tên cột chứa doanh thu
+
+                    series.Points.AddXY(day, revenue);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error adding data point: {ex.Message}");
+                }
+            }
+
+            // Thêm Series vào biểu đồ
+            chart1.Series.Add(series);
+
+            // Tùy chỉnh trục
+            chartArea.AxisX.Title = "Ngày";
+            chartArea.AxisY.Title = "Doanh thu (VNĐ)";
+            chartArea.AxisX.Interval = 1; // Hiển thị từng nhãn trục X
+        }
+
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -88,6 +147,13 @@ namespace QuanLyCuaHang
             panel_movingdoanhthu.Left = btn_doanhthuthang.Left;
             uC_DoanhThuThang1.Visible = true;
             uC_DoanhThuThang1.BringToFront();
+
+            uC_DoanhThuThang1.OnLoadChartDataThang += UcDoanhThuThang_OnLoadChartDataThang;
+
+            //int thang = uC_DoanhThuThang1.getThang();
+            //int nam = uC_DoanhThuThang1.getNam();
+
+            //LoadChartDataThang(thang, nam);
         }
 
         private void label7_Click(object sender, EventArgs e)

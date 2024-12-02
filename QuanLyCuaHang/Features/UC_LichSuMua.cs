@@ -17,7 +17,7 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
             InitializeUC_TimHoaDon(); // Gọi hàm khởi tạo
-            getData();
+            loadData();
         }
 
         private void InitializeUC_TimHoaDon()
@@ -30,7 +30,7 @@ namespace QuanLyCuaHang
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
         }
-        public void clearData()
+        public void loadData()
         {
             getData();
         }
@@ -45,6 +45,11 @@ namespace QuanLyCuaHang
             {
                 MessageBox.Show("Không tìm thấy hóa đơn phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void UcTimHoaDon_OnRefreshData(object sender, DataTable newData)
+        {
+            loadData();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -102,6 +107,7 @@ namespace QuanLyCuaHang
 
             // Đăng ký sự kiện OnDataUpdated
             uC_TimHoaDon2.OnDataUpdated += UcTimHoaDon_OnDataUpdated;
+            uC_TimHoaDon2.OnRefreshData += UcTimHoaDon_OnRefreshData;
 
             //uC_TimHoaDon1.Visible=false;
             //uC_XoaHoaDon1.Visible = false;
