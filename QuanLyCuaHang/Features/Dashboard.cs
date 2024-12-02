@@ -52,7 +52,9 @@ namespace QuanLyCuaHang
                 button_doanhthu.Visible = true;
                 uC_DoanhThu1.Visible = true;
                 uC_QuanLyNhanVien1.Visible = true;
+                uC_QuanLyKhachHang1.Visible=true;
                 button_quanlynhanvien.Visible = true;
+                button_quanlykhachhang.Visible=true;
             }
             else
             {
@@ -60,6 +62,8 @@ namespace QuanLyCuaHang
                 uC_DoanhThu1.Visible = false;
                 uC_QuanLyNhanVien1.Visible = false;
                 button_quanlynhanvien.Visible = false;
+                button_quanlynhanvien.Visible = false;
+                button_quanlykhachhang.Visible = false; 
             }
 
         }

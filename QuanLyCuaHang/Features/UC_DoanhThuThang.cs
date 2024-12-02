@@ -19,14 +19,14 @@ namespace QuanLyCuaHang
             InitializeComponent();
             guna2Combox1_Load(this, new EventArgs());
             guna2Combox2_Load(this, new EventArgs());
-            //UC_DoanhThuThang_Load(this, new EventArgs());
+            UC_DoanhThuThang_Load(this, new EventArgs());
         }
 
         private void UC_DoanhThuThang_Load(object sender, EventArgs e)
         {
-            LoadChartDataThang();
-            guna2TextBox4.Text = GetSoLuongHoaDon(getThang(), getNam()).ToString();
-            guna2TextBox3.Text = GetTongDoanhThu(getThang(), getNam()).ToString();
+            LoadChartDataThang(DateTime.Now.Month, DateTime.Now.Year);
+            guna2TextBox4.Text = GetSoLuongHoaDon(DateTime.Now.Month, DateTime.Now.Year).ToString();
+            guna2TextBox3.Text = GetTongDoanhThu(DateTime.Now.Month, DateTime.Now.Year).ToString();
         }
 
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
@@ -150,23 +150,28 @@ namespace QuanLyCuaHang
 
         public event EventHandler<Tuple<int, int>> OnLoadChartDataThang;
 
-        private void LoadChartDataThang()
+        private void LoadChartDataThang(int thang, int nam)
         {
-            int thang = getThang();
-            int nam = getNam();
-
             // Kích hoạt sự kiện và truyền dữ liệu bằng Tuple
             OnLoadChartDataThang?.Invoke(this, Tuple.Create(thang, nam));
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void guna2ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            int thang = getThang();
+            int nam = getNam();
 
+            LoadChartDataThang(thang, nam);
+            guna2TextBox4.Text = GetSoLuongHoaDon(getThang(), getNam()).ToString();
+            guna2TextBox3.Text = GetTongDoanhThu(getThang(), getNam()).ToString();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2ComboBox2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            LoadChartDataThang();
+            int thang = getThang();
+            int nam = getNam();
+
+            LoadChartDataThang(thang, nam);
             guna2TextBox4.Text = GetSoLuongHoaDon(getThang(), getNam()).ToString();
             guna2TextBox3.Text = GetTongDoanhThu(getThang(), getNam()).ToString();
         }
