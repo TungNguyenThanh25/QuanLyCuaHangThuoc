@@ -40,7 +40,7 @@ namespace QuanLyCuaHang
             }
             catch (Exception ex)
             {
-                // MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
+                //MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
             }
 
             // Nếu dữ liệu có sẵn, chuyển đổi các năm vào mảng string[]
@@ -73,10 +73,12 @@ namespace QuanLyCuaHang
             }
             catch (Exception ex)
             {
-                // MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
+                //MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
             }
 
-            return dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
+            if (dataTable.Rows.Count > 1)
+                return dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
+            return 0;
         }
 
         private decimal GetTongDoanhThu(int nam)
@@ -91,15 +93,15 @@ namespace QuanLyCuaHang
             catch (Exception ex)
             {
                 // Log lỗi (nếu cần)
-                Console.WriteLine($"Error: {ex.Message}");
+                //MessageBox.Show($"Error: {ex.Message}");
             }
 
-            if (dataTable.Rows.Count > 0)
+            if (dataTable.Rows.Count > 1)
             {
                 return dataTable.Rows[0].Field<decimal>("Tổng doanh thu"); // Lấy giá trị kiểu decimal
             }
 
-            return 0; // Trả về 0 nếu không có dữ liệu
+            return decimal.Zero; // Trả về 0 nếu không có dữ liệu
         }
 
 

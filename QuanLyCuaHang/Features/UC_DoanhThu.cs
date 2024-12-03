@@ -73,19 +73,17 @@ namespace QuanLyCuaHang
                 //// Ghi log hoặc hiển thị thông báo lỗi
                 //Console.WriteLine($"Error: {ex.Message}");
             }
-            return dataTable;
+
+            if (dataTable.Rows.Count > 0)
+                return dataTable;
+
+            return new DataTable();
         }
 
         private void LoadChartDataThang(int thang, int nam)
         {
             DataTable dtTable = GetDataThangFromTable(thang, nam);
 
-            //iểm tra dữ liệu có tồn tại
-            if (dtTable.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu để hiển thị biểu đồ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
 
             // Xóa dữ liệu cũ (nếu có)
             chart1.Series.Clear();
@@ -95,12 +93,28 @@ namespace QuanLyCuaHang
             ChartArea chartArea = new ChartArea("DoanhThuArea");
             chart1.ChartAreas.Add(chartArea);
 
-            // Tạo Series và thêm dữ liệu
-            Series series = new Series("Doanh thu tháng " + thang + " " + nam)
+            Series series;
+
+            //iểm tra dữ liệu có tồn tại
+            if (dtTable.Rows.Count == 0)
             {
-                ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
-                IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
-            };
+                //MessageBox.Show("Không có dữ liệu để hiển thị biểu đồ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                series = new Series("Khong có dữ liệu của " + thang + " " + nam)
+                {
+                    ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
+                    IsValueShownAsLabel = true          // Hiển thị giá trị trên cột`
+                };
+                return;
+            }
+            else
+            {
+                // Tạo Series và thêm dữ liệu
+                series = new Series("Doanh thu năm " + nam)
+                {
+                    ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
+                    IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
+                };
+            }
 
             foreach (DataRow row in dtTable.Rows)
             {
@@ -114,7 +128,7 @@ namespace QuanLyCuaHang
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error adding data point: {ex.Message}");
+                    //Console.WriteLine($"Error adding data point: {ex.Message}");
                 }
             }
 
@@ -139,21 +153,18 @@ namespace QuanLyCuaHang
             catch (Exception ex)
             {
                 //// Ghi log hoặc hiển thị thông báo lỗi
-                //Console.WriteLine($"Error: {ex.Message}");
+                //MessageBox.Show($"Error: {ex.Message}");
             }
-            return dataTable;
+
+            if (dataTable.Rows.Count > 0)
+                return dataTable;
+
+            return new DataTable();
         }
 
         private void LoadChartDataNam(int nam)
         {
             DataTable dtTable = GetDataNamFromTable(nam);
-
-            //iểm tra dữ liệu có tồn tại
-            if (dtTable.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu để hiển thị biểu đồ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
 
             // Xóa dữ liệu cũ (nếu có)
             chart1.Series.Clear();
@@ -163,13 +174,28 @@ namespace QuanLyCuaHang
             ChartArea chartArea = new ChartArea("DoanhThuArea");
             chart1.ChartAreas.Add(chartArea);
 
-            // Tạo Series và thêm dữ liệu
-            Series series = new Series("Doanh thu năm "  + nam)
-            {
-                ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
-                IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
-            };
+            Series series;
 
+            //iểm tra dữ liệu có tồn tại
+            if (dtTable.Rows.Count == 0)
+            {
+                //MessageBox.Show("Không có dữ liệu để hiển thị biểu đồ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                series = new Series("Khong có dữ liệu của " + nam)
+                {
+                    ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
+                    IsValueShownAsLabel = true          // Hiển thị giá trị trên cột`
+                };
+            }
+            else
+            {
+                // Tạo Series và thêm dữ liệu
+                series = new Series("Doanh thu năm " + nam)
+                {
+                    ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
+                    IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
+                };
+            }
+            
             foreach (DataRow row in dtTable.Rows)
             {
                 try
@@ -182,7 +208,7 @@ namespace QuanLyCuaHang
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error adding data point: {ex.Message}");
+                    MessageBox.Show($"Error adding data point: {ex.Message}");
                 }
             }
 

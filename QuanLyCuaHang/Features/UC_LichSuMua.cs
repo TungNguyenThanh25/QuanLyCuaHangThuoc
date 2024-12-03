@@ -39,12 +39,6 @@ namespace QuanLyCuaHang
         {
             // Cập nhật DataGridView với dữ liệu mới
             guna2DataGridView1.DataSource = newData;
-
-            // Kiểm tra dữ liệu trống
-            if (newData == null || newData.Rows.Count == 0)
-            {
-                MessageBox.Show("Không tìm thấy hóa đơn phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void UcTimHoaDon_OnRefreshData(object sender, DataTable newData)

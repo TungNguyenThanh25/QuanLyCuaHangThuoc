@@ -49,7 +49,6 @@ namespace QuanLyCuaHang
         {
             text_tenkhachhangtimhoadon.Clear();
             text_ngaymuahangtimhoadon.Clear();
-
             RefeshData();
         }
 
@@ -64,9 +63,10 @@ namespace QuanLyCuaHang
         private void btn_timhoadon_Click(object sender, EventArgs e)
         {
             DataTable data = GetHoaDon();
-            if (data == null || data.Rows.Count == 0)
+            if (data.Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             UpdateData(data);
         }

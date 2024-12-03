@@ -19,9 +19,12 @@ namespace QuanLyCuaHang
 
         private void btn_huyxoahoadon_Click(object sender, EventArgs e)
         {
-            text_tenkhachhangxoahoadon.Clear();
             text_mahoadonxoahoadon.Clear();
-            text_ngaymuahangxoahoadon.Clear();
+
+        }
+
+        private void btn_xoahoadonhoadon_Click(object sender, EventArgs e)
+        {
 
         }
     }
