@@ -19,16 +19,31 @@ namespace QuanLyCuaHang
             InitializeComponent();
             guna2Combox1_Load(this, new EventArgs());
             guna2Combox2_Load(this, new EventArgs());
-            UC_DoanhThuThang_Load(this, new EventArgs());
         }
 
-        private void UC_DoanhThuThang_Load(object sender, EventArgs e)
+        public void clearData()
         {
-            LoadChartDataThang(DateTime.Now.Month, DateTime.Now.Year);
-            guna2TextBox4.Text = GetSoLuongHoaDon(DateTime.Now.Month, DateTime.Now.Year).ToString();
-            guna2TextBox3.Text = GetTongDoanhThu(DateTime.Now.Month, DateTime.Now.Year).ToString();
-            guna2ComboBox1.SelectedItem = DateTime.Now.Month.ToString();
-            guna2ComboBox2.SelectedItem = DateTime.Now.Year.ToString();
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+
+            // Kiểm tra nếu ComboBox chứa giá trị năm
+            if (guna2ComboBox2.Items.Contains(year.ToString()))
+            {
+                // Nếu có, chọn giá trị đó
+                guna2ComboBox2.SelectedItem = year.ToString();
+            }
+
+            // Kiểm tra nếu có mục được chọn
+            if (guna2ComboBox2.SelectedItem != null)
+            {
+                year = int.Parse(guna2ComboBox2.SelectedItem.ToString());
+            }
+
+            // Thực hiện các tác vụ khác
+            LoadChartDataThang(month, year);
+            guna2TextBox4.Text = GetSoLuongHoaDon(month, year).ToString();
+            guna2TextBox3.Text = GetTongDoanhThu(month, year).ToString();
+            guna2ComboBox1.SelectedItem = month.ToString();
         }
 
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
@@ -93,10 +108,7 @@ namespace QuanLyCuaHang
                 //MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
             }
 
-            if (dataTable.Rows.Count < 1) return 0;
-
-            int sl = dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
-            return sl;
+            return dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
         }
 
         private decimal GetTongDoanhThu(int thang, int nam)
@@ -114,12 +126,7 @@ namespace QuanLyCuaHang
                 //MessageBox.Show($"Error: {ex.Message}");
             }
 
-            if (dataTable.Rows.Count > 1)
-            {
-                return dataTable.Rows[0].Field<decimal>("Tổng doanh thu"); // Lấy giá trị kiểu decimal
-            }
-
-            return decimal.Zero; // Trả về 0 nếu không có dữ liệu
+            return dataTable.Rows[0].Field<decimal>("Tổng doanh thu"); // Trả dữ liệu
         }
 
         public void guna2Combox1_Load(object sender, EventArgs e)
@@ -161,24 +168,24 @@ namespace QuanLyCuaHang
             OnLoadChartDataThang?.Invoke(this, Tuple.Create(thang, nam));
         }
 
-        private void guna2ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        private void changeLoad()
         {
             int thang = getThang();
             int nam = getNam();
 
             LoadChartDataThang(thang, nam);
-            guna2TextBox4.Text = GetSoLuongHoaDon(getThang(), getNam()).ToString();
-            guna2TextBox3.Text = GetTongDoanhThu(getThang(), getNam()).ToString();
+            guna2TextBox4.Text = GetSoLuongHoaDon(thang, nam).ToString();
+            guna2TextBox3.Text = GetTongDoanhThu(thang, nam).ToString();
+        }
+
+        private void guna2ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            changeLoad();
         }
 
         private void guna2ComboBox2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int thang = getThang();
-            int nam = getNam();
-
-            LoadChartDataThang(thang, nam);
-            guna2TextBox4.Text = GetSoLuongHoaDon(getThang(), getNam()).ToString();
-            guna2TextBox3.Text = GetTongDoanhThu(getThang(), getNam()).ToString();
+            changeLoad();
         }
     }
 }

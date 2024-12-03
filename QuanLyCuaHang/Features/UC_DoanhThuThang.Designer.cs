@@ -160,6 +160,7 @@
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.Size = new System.Drawing.Size(140, 36);
             this.guna2ComboBox2.TabIndex = 35;
+            this.guna2ComboBox2.SelectionChangeCommitted += new System.EventHandler(this.guna2ComboBox2_SelectionChangeCommitted);
             // 
             // label1
             // 

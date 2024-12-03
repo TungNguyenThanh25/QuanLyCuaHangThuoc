@@ -159,7 +159,7 @@ namespace QuanLyCuaHang
             uC_QuanLyKhachHang1.Visible = false;
             uC_QuanLyNhanVien1.Visible = false;
 
-            //uC_DoanhThu1.clearData();
+            uC_DoanhThu1.clearData();
 
             panel_moving.Left = button_doanhthu.Left + 1;
             uC_DoanhThu1.Visible = true;

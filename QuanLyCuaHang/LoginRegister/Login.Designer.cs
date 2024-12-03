@@ -53,10 +53,9 @@
             this.guna2Panel1.Controls.Add(this.txt_user);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btn_exit);
-            this.guna2Panel1.Location = new System.Drawing.Point(406, 228);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(304, 185);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1390, 688);
+            this.guna2Panel1.Size = new System.Drawing.Size(1042, 559);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -65,10 +64,9 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(180, 170);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(135, 138);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(403, 331);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(302, 269);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 15;
             this.guna2PictureBox1.TabStop = false;
@@ -84,10 +82,9 @@
             this.buttonDangKi.FillColor = System.Drawing.Color.Transparent;
             this.buttonDangKi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDangKi.ForeColor = System.Drawing.Color.Red;
-            this.buttonDangKi.Location = new System.Drawing.Point(904, 511);
-            this.buttonDangKi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDangKi.Location = new System.Drawing.Point(678, 415);
             this.buttonDangKi.Name = "buttonDangKi";
-            this.buttonDangKi.Size = new System.Drawing.Size(199, 41);
+            this.buttonDangKi.Size = new System.Drawing.Size(149, 33);
             this.buttonDangKi.TabIndex = 8;
             this.buttonDangKi.Text = "Đăng Kí";
             this.buttonDangKi.Click += new System.EventHandler(this.buttonDangKi_Click);
@@ -103,10 +100,9 @@
             this.btn_login.FillColor = System.Drawing.Color.Cyan;
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.Black;
-            this.btn_login.Location = new System.Drawing.Point(729, 443);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_login.Location = new System.Drawing.Point(547, 360);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(550, 60);
+            this.btn_login.Size = new System.Drawing.Size(412, 49);
             this.btn_login.TabIndex = 5;
             this.btn_login.Text = "Đăng Nhập";
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
@@ -127,13 +123,13 @@
             this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_password.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_password.IconLeft")));
             this.txt_password.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txt_password.Location = new System.Drawing.Point(726, 361);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_password.Location = new System.Drawing.Point(544, 293);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
             this.txt_password.PlaceholderText = "Mật khẩu";
             this.txt_password.SelectedText = "";
-            this.txt_password.Size = new System.Drawing.Size(553, 60);
+            this.txt_password.Size = new System.Drawing.Size(415, 49);
             this.txt_password.TabIndex = 4;
             // 
             // txt_user
@@ -152,13 +148,13 @@
             this.txt_user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_user.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_user.IconLeft")));
             this.txt_user.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txt_user.Location = new System.Drawing.Point(726, 260);
-            this.txt_user.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_user.Location = new System.Drawing.Point(544, 211);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_user.Name = "txt_user";
             this.txt_user.PasswordChar = '\0';
             this.txt_user.PlaceholderText = "Tên đăng nhập";
             this.txt_user.SelectedText = "";
-            this.txt_user.Size = new System.Drawing.Size(553, 60);
+            this.txt_user.Size = new System.Drawing.Size(415, 49);
             this.txt_user.TabIndex = 3;
             this.txt_user.TextChanged += new System.EventHandler(this.txt_user_TextChanged);
             // 
@@ -167,10 +163,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(899, 118);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(674, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 50);
+            this.label1.Size = new System.Drawing.Size(172, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -186,23 +181,21 @@
             this.btn_exit.ForeColor = System.Drawing.Color.White;
             this.btn_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.Image")));
             this.btn_exit.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_exit.Location = new System.Drawing.Point(0, 0);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_exit.Location = new System.Drawing.Point(983, 0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_exit.Size = new System.Drawing.Size(79, 71);
+            this.btn_exit.Size = new System.Drawing.Size(59, 58);
             this.btn_exit.TabIndex = 0;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(2916, 1263);
+            this.ClientSize = new System.Drawing.Size(1455, 894);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

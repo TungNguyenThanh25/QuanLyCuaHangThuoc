@@ -14,25 +14,21 @@ namespace QuanLyCuaHang
             InitializeComponent();
             InitializeUC_XemDoanhThuThang();
             InitializeUC_XemDoanhThuNam();
-            UC_XemDoanhThu_Load(this, new EventArgs());
+            clearData();
         }
 
         public void clearData()
-        {
-            UC_XemDoanhThu_Load(this, new EventArgs());
-        }
-
-
-        private void UC_XemDoanhThu_Load(object sender, EventArgs e)
         {
             // Ẩn các control không cần thiết
             uC_DoanhThuThang1.Visible = false;
             uC_DoanhThuNam1.Visible = false;
 
+            btn_doanhthunam.PerformClick();
             // Kích hoạt hành động nhấn nút
             btn_doanhthuthang.PerformClick();
 
-            UcDoanhThuThang_OnLoadChartDataThang(sender, Tuple.Create(DateTime.Now.Month, DateTime.Now.Year));
+            uC_DoanhThuNam1.clearData();
+            uC_DoanhThuThang1.clearData();
         }
 
         private void InitializeUC_XemDoanhThuThang()
@@ -58,12 +54,6 @@ namespace QuanLyCuaHang
         {
             int nam = e;
             LoadChartDataNam(nam);
-        }
-
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bạn vừa nhấp vào biểu đồ!");
         }
 
         private DataTable GetDataThangFromTable(int thang, int nam)
@@ -116,7 +106,7 @@ namespace QuanLyCuaHang
             else
             {
                 // Tạo Series và thêm dữ liệu
-                series = new Series("Doanh thu năm " + nam)
+                series = new Series("Doanh thu tháng " + thang + ", năm " + nam)
                 {
                     ChartType = SeriesChartType.Column, // Biểu đồ dạng cột
                     IsValueShownAsLabel = true          // Hiển thị giá trị trên cột
@@ -257,8 +247,7 @@ namespace QuanLyCuaHang
             //uC_DoanhThuNam1.
             uC_DoanhThuNam1.OnLoadChartDataNam += UcDoanhThuNam_OnLoadChartDataNam;
 
-            int nam = uC_DoanhThuNam1.getNam();
-            LoadChartDataNam(nam);
+            uC_DoanhThuNam1.clearData();
         }
 
         private void btn_doanhthuthang_Click(object sender, EventArgs e)
@@ -270,9 +259,7 @@ namespace QuanLyCuaHang
 
             uC_DoanhThuThang1.OnLoadChartDataThang += UcDoanhThuThang_OnLoadChartDataThang;
 
-            int thang = uC_DoanhThuThang1.getThang();
-            int nam = uC_DoanhThuThang1.getNam();
-            LoadChartDataThang(thang, nam);
+            uC_DoanhThuThang1.clearData();
         }
 
         private void label7_Click(object sender, EventArgs e)

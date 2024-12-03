@@ -18,14 +18,30 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
             guna2Combox2_Load(this, new EventArgs());
-            UC_DoanhThuNam_Load(this, new EventArgs());
+            clearData();
         }
 
-        private void UC_DoanhThuNam_Load(object sender, EventArgs e)
+        public void clearData()
         {
-            LoadChartDataNam(DateTime.Now.Year);
-            guna2TextBox6.Text = GetSoLuongHoaDon(DateTime.Now.Year).ToString();
-            guna2TextBox5.Text = GetTongDoanhThu(DateTime.Now.Year).ToString();
+            int year = DateTime.Now.Year;
+
+            // Kiểm tra nếu ComboBox chứa giá trị năm
+            if (guna2ComboBox2.Items.Contains(year.ToString()))
+            {
+                // Nếu có, chọn giá trị đó
+                guna2ComboBox2.SelectedItem = year.ToString();
+            }
+
+            // Kiểm tra nếu có mục được chọn
+            if (guna2ComboBox2.SelectedItem != null)
+            {
+                year = int.Parse(guna2ComboBox2.SelectedItem.ToString());
+            }
+
+            // Thực hiện các tác vụ khác
+            LoadChartDataNam(year);
+            guna2TextBox6.Text = GetSoLuongHoaDon(year).ToString();
+            guna2TextBox5.Text = GetTongDoanhThu(year).ToString();
         }
 
         //Lấy dữ liệu từng bảng
@@ -76,9 +92,7 @@ namespace QuanLyCuaHang
                 //MessageBox.Show($"Error: {ex.Message}");  // Xử lý lỗi nếu có
             }
 
-            if (dataTable.Rows.Count > 1)
-                return dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
-            return 0;
+            return dataTable.Rows[0].Field<int>("Số lượng hóa đơn");
         }
 
         private decimal GetTongDoanhThu(int nam)
@@ -95,13 +109,8 @@ namespace QuanLyCuaHang
                 // Log lỗi (nếu cần)
                 //MessageBox.Show($"Error: {ex.Message}");
             }
-
-            if (dataTable.Rows.Count > 1)
-            {
-                return dataTable.Rows[0].Field<decimal>("Tổng doanh thu"); // Lấy giá trị kiểu decimal
-            }
-
-            return decimal.Zero; // Trả về 0 nếu không có dữ liệu
+            
+            return dataTable.Rows[0].Field<decimal>("Tổng doanh thu"); // Lấy giá trị kiểu decimal
         }
 
 
@@ -138,11 +147,16 @@ namespace QuanLyCuaHang
             int nam = getNam();
 
             LoadChartDataNam(nam);
-            guna2TextBox6.Text = GetSoLuongHoaDon(getNam()).ToString();
-            guna2TextBox5.Text = GetTongDoanhThu(getNam()).ToString();
+            guna2TextBox6.Text = GetSoLuongHoaDon(nam).ToString();
+            guna2TextBox5.Text = GetTongDoanhThu(nam).ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
