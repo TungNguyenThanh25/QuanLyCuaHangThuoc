@@ -69,6 +69,7 @@
             this.btn_timthongtinnhanvien.Size = new System.Drawing.Size(416, 37);
             this.btn_timthongtinnhanvien.TabIndex = 41;
             this.btn_timthongtinnhanvien.Text = "Tìm";
+            this.btn_timthongtinnhanvien.Click += new System.EventHandler(this.btn_timthongtinnhanvien_Click);
             // 
             // txt_manhanvientim
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyCuaHang.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,20 @@ namespace QuanLyCuaHang
         private void btn_huyxoahoadon_Click(object sender, EventArgs e)
         {
             text_mahoadonxoahoadon.Clear();
-
         }
+
+        //private void XoaHoaDon()
+        //{
+        //    try
+        //    {
+        //        DatabaseExecute dbExec = new DatabaseExecute();
+        //        dbExec.Query = $"EXEC SP_Delete_ChiTietHoaDon N'{text_mahoadonxoahoadon.Text}', '{text_ngaymuahangtimhoadon.Text}'";
+        //        dbExec.executeQueryCommand();
+        //        dbExec.Query = $"EXEC SP_Delete_HoaDon N'{text_tenkhachhangtimhoadon.Text}', '{text_ngaymuahangtimhoadon.Text}'";
+        //        dbExec.executeQueryCommand();
+        //    }
+        //    catch (Exception ex) { }
+        //}
 
         private void btn_xoahoadonhoadon_Click(object sender, EventArgs e)
         {

@@ -18,8 +18,6 @@ namespace QuanLyCuaHang
             InitializeComponent();
         }
 
-
-
         private void getData()
         {
             guna2DataGridView1.DataSource = GetDataFromTable();
@@ -86,6 +84,7 @@ namespace QuanLyCuaHang
 
         }
 
+        // Xoa san pham
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             uC_ThemSanPham1.Visible = false;
@@ -97,6 +96,7 @@ namespace QuanLyCuaHang
             getData();
         }
 
+        // Sua san pham
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             uC_ThemSanPham1.Visible = false;
@@ -118,6 +118,7 @@ namespace QuanLyCuaHang
 
         }
 
+        // Them san pham
         private void btn_themsanpham_Click(object sender, EventArgs e)
         {
             //uC_ThemSanPham1.Visible = false;

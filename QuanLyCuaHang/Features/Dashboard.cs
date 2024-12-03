@@ -31,7 +31,6 @@ namespace QuanLyCuaHang
             }
         }
 
-        
         private void Dashboard_Load(object sender, EventArgs e)
         {
             guna2TextBox1.Text = $"{User.username}";

@@ -1,4 +1,5 @@
-﻿using QuanLyCuaHang.Database;
+﻿using Guna.UI2.WinForms;
+using QuanLyCuaHang.Database;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -15,6 +16,12 @@ namespace QuanLyCuaHang
             InitializeUC_XemDoanhThuNam();
             UC_XemDoanhThu_Load(this, new EventArgs());
         }
+
+        public void clearData()
+        {
+            UC_XemDoanhThu_Load(this, new EventArgs());
+        }
+
 
         private void UC_XemDoanhThu_Load(object sender, EventArgs e)
         {
